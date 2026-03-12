@@ -1,0 +1,925 @@
+2026-03-11 06:39:43 | INFO     | skill_normalizer:15 | SkillNormalizer loaded 143 alias entries.
+2026-03-11 06:39:43 | INFO     | skill_extractor:23 | SkillExtractor loaded 229 skills.
+2026-03-11 06:39:43 | INFO     | skill_normalizer:15 | SkillNormalizer loaded 143 alias entries.
+2026-03-11 06:39:43 | INFO     | skill_gap_analyzer:62 | Gap analysis: matching=2, missing=9, extra=10, coverage=18.2%
+2026-03-11 06:39:43 | INFO     | regression_model:25 | RegressionScoringModel initialized and trained on synthetic dataset.
+2026-03-11 06:39:43 | DEBUG    | regression_model:95 | Score prediction: match=0.18, missing=0.82, skills=12, kw_density=0.283, exp_signal=0.48 → score=0.255
+2026-03-11 06:39:43 | INFO     | probability_estimator:71 | Probability estimate: score=0.255, match=0.1818, exp=0.48, competition=0.85 → 12.5%
+2026-03-11 06:39:43 | INFO     | personality_analyzer:100 | PersonalityAnalyzer scores: {'Technical Depth': 3.7, 'Problem Solving': 2.0, 'Team Collaboration': 2.7, 'Communication': 1.5, 'Leadership': 1.0, 'System Design': 2.7, 'Learning Ability': 2.0, 'Project Ownership': 1.9}
+2026-03-11 06:39:44 | INFO     | radar_chart_generator:76 | Radar chart saved to d:/temp/airesumeprt/outputs/skill_radar_chart.png
+2026-03-11 06:39:44 | INFO     | spider_chart_generator:65 | Spider chart saved to d:/temp/airesumeprt/outputs/personality_spider_chart.png
+2026-03-11 06:42:59 | INFO     | skill_normalizer:15 | SkillNormalizer loaded 143 alias entries.
+2026-03-11 06:42:59 | INFO     | skill_extractor:23 | SkillExtractor loaded 229 skills.
+2026-03-11 06:42:59 | INFO     | skill_normalizer:15 | SkillNormalizer loaded 143 alias entries.
+2026-03-11 06:42:59 | INFO     | skill_normalizer:15 | SkillNormalizer loaded 143 alias entries.
+2026-03-11 06:42:59 | INFO     | regression_model:25 | RegressionScoringModel initialized and trained on synthetic dataset.
+2026-03-11 06:43:35 | INFO     | resume_parser:16 | Resume input: raw text paste.
+2026-03-11 06:43:35 | INFO     | main:96 | Resume extracted: 46 chars, is_file=False
+2026-03-11 06:43:44 | INFO     | main:104 | Analysis start: role='ai engineer', company=''
+2026-03-11 06:43:44 | INFO     | main:111 | Resume skills: []
+2026-03-11 06:43:49 | WARNING  | internet_job_scraper:122 | Internet scraping failed for 'ai engineer'. Using fallback dataset.
+2026-03-11 06:43:49 | INFO     | skill_gap_analyzer:62 | Gap analysis: matching=0, missing=5, extra=0, coverage=0.0%
+2026-03-11 06:43:49 | INFO     | main:138 | Cosine similarity: 0.0
+2026-03-11 06:43:49 | DEBUG    | regression_model:95 | Score prediction: match=0.00, missing=1.00, skills=0, kw_density=0.000, exp_signal=0.00 → score=0.061
+2026-03-11 06:43:49 | INFO     | probability_estimator:71 | Probability estimate: score=0.061, match=0.0, exp=0.0, competition=0.85 → 2.8%
+2026-03-11 06:43:49 | INFO     | personality_analyzer:100 | PersonalityAnalyzer scores: {'Technical Depth': 2.5, 'Problem Solving': 2.0, 'Team Collaboration': 1.5, 'Communication': 1.5, 'Leadership': 1.0, 'System Design': 2.0, 'Learning Ability': 2.0, 'Project Ownership': 1.5}
+2026-03-11 06:43:49 | INFO     | radar_chart_generator:76 | Radar chart saved to D:\temp\airesumeprt\outputs\skill_radar_chart.png
+2026-03-11 06:43:50 | INFO     | spider_chart_generator:65 | Spider chart saved to D:\temp\airesumeprt\outputs\personality_spider_chart.png
+2026-03-11 07:03:19 | INFO     | skill_extractor:72 | SkillExtractor ready: 390 skills from categories.
+2026-03-11 07:03:20 | INFO     | skill_extractor:113 | Extracted 13 skills from text.
+2026-03-11 07:03:20 | INFO     | skill_normalizer:21 | SkillNormalizer: 143 aliases loaded.
+2026-03-11 07:03:20 | INFO     | skill_gap_analyzer:39 | Gap: matching=4, missing=7, extra=1, coverage=36.36%
+2026-03-11 07:03:22 | INFO     | regression_model:61 | RegressionScoringModel trained on 17-sample synthetic dataset.
+2026-03-11 07:03:22 | WARNING  | regression_model:81 | Scoring aborted: resume_skills is empty. Cannot produce a valid score.
+2026-03-11 07:03:22 | DEBUG    | regression_model:94 | Score: 0.727 | match=0.70, missing=0.30, n_skills=15, kw=0.200, exp=0.50
+2026-03-11 07:03:22 | INFO     | probability_estimator:71 | Probability estimate: score=0.727, match=0.6, exp=0.4, competition=0.75 → 64.6%
+2026-03-11 07:03:23 | INFO     | radar_chart_generator:78 | Radar chart saved: d:/temp/airesumeprt/outputs/skill_radar_chart.png
+2026-03-11 07:03:23 | INFO     | personality_analyzer:128 | PersonalityAnalyzer: {'Technical Depth': 4.0, 'Problem Solving': 0.0, 'Team Collaboration': 0.0, 'Communication': 0.0, 'Leadership': 0.0, 'System Design': 2.9, 'Learning Ability': 0.0, 'Project Ownership': 1.7}
+2026-03-11 07:03:23 | INFO     | resume_improvement_advisor:191 | Generated 3 resume improvement suggestions.
+2026-03-11 07:03:23 | INFO     | interview_question_generator:279 | Interview difficulty: junior (combined=0.19)
+2026-03-11 07:03:23 | INFO     | interview_question_generator:339 | Generated 6 interview questions (difficulty=junior).
+2026-03-11 07:03:23 | INFO     | interview_question_generator:279 | Interview difficulty: senior (combined=0.78)
+2026-03-11 07:03:23 | INFO     | interview_question_generator:339 | Generated 8 interview questions (difficulty=senior).
+2026-03-11 07:04:26 | INFO     | skill_extractor:72 | SkillExtractor ready: 390 skills from categories.
+2026-03-11 07:04:26 | INFO     | skill_extractor:113 | Extracted 13 skills from text.
+2026-03-11 07:04:26 | INFO     | skill_normalizer:21 | SkillNormalizer: 143 aliases loaded.
+2026-03-11 07:04:26 | INFO     | skill_gap_analyzer:39 | Gap: matching=4, missing=7, extra=1, coverage=36.36%
+2026-03-11 07:04:29 | INFO     | regression_model:61 | RegressionScoringModel trained on 17-sample synthetic dataset.
+2026-03-11 07:04:29 | WARNING  | regression_model:81 | Scoring aborted: resume_skills is empty. Cannot produce a valid score.
+2026-03-11 07:04:29 | DEBUG    | regression_model:94 | Score: 0.727 | match=0.70, missing=0.30, n_skills=15, kw=0.200, exp=0.50
+2026-03-11 07:04:29 | INFO     | probability_estimator:71 | Probability estimate: score=0.727, match=0.6, exp=0.4, competition=0.75 → 64.6%
+2026-03-11 07:04:30 | INFO     | radar_chart_generator:78 | Radar chart saved: d:/temp/airesumeprt/outputs/skill_radar_chart.png
+2026-03-11 07:04:30 | INFO     | personality_analyzer:134 | PersonalityAnalyzer: {'Technical Depth': 10.0, 'Problem Solving': 0.0, 'Team Collaboration': 0.0, 'Communication': 0.0, 'Leadership': 0.0, 'System Design': 10.0, 'Learning Ability': 0.0, 'Project Ownership': 10.0}
+2026-03-11 07:04:30 | INFO     | resume_improvement_advisor:191 | Generated 3 resume improvement suggestions.
+2026-03-11 07:04:30 | INFO     | interview_question_generator:279 | Interview difficulty: junior (combined=0.19)
+2026-03-11 07:04:30 | INFO     | interview_question_generator:339 | Generated 6 interview questions (difficulty=junior).
+2026-03-11 07:04:30 | INFO     | interview_question_generator:279 | Interview difficulty: senior (combined=0.78)
+2026-03-11 07:04:30 | INFO     | interview_question_generator:339 | Generated 8 interview questions (difficulty=senior).
+2026-03-11 07:05:47 | INFO     | skill_extractor:72 | SkillExtractor ready: 390 skills from categories.
+2026-03-11 07:05:47 | INFO     | skill_normalizer:21 | SkillNormalizer: 143 aliases loaded.
+2026-03-11 07:05:47 | INFO     | regression_model:61 | RegressionScoringModel trained on 17-sample synthetic dataset.
+2026-03-11 07:06:09 | INFO     | resume_parser:16 | Resume input: raw text paste.
+2026-03-11 07:06:09 | INFO     | main:112 | Resume parsed: 1 words
+2026-03-11 07:06:46 | INFO     | main:120 | Analysis: role='ai engineer', company=''
+2026-03-11 07:06:47 | INFO     | skill_extractor:113 | Extracted 1 skills from text.
+2026-03-11 07:06:47 | WARNING  | internet_job_scraper:175 | DDG returned HTTP 202 for 'skills required for ai engineer job'
+2026-03-11 07:06:48 | WARNING  | internet_job_scraper:175 | DDG returned HTTP 202 for 'top technical skills ai engineer 2024'
+2026-03-11 07:06:49 | WARNING  | internet_job_scraper:175 | DDG returned HTTP 202 for 'ai engineer job description requirements skills'
+2026-03-11 07:06:50 | WARNING  | internet_job_scraper:175 | DDG returned HTTP 202 for 'ai engineer resume required skills'
+2026-03-11 07:06:50 | WARNING  | internet_job_scraper:131 | Internet scraping returned no results for 'ai engineer'.
+2026-03-11 07:06:50 | WARNING  | skill_gap_analyzer:22 | SkillGapAnalyzer: role_skills is empty.
+2026-03-11 07:06:50 | INFO     | skill_priority_ranker:87 | Ranked 0 missing skills by priority.
+2026-03-11 07:06:50 | INFO     | skill_extractor:113 | Extracted 1 skills from text.
+2026-03-11 07:06:50 | DEBUG    | regression_model:94 | Score: 0.408 | match=0.00, missing=0.00, n_skills=1, kw=1.000, exp=0.00
+2026-03-11 07:06:50 | INFO     | probability_estimator:71 | Probability estimate: score=0.408, match=0.0, exp=0.0, competition=0.85 → 8.7%
+2026-03-11 07:06:50 | INFO     | personality_analyzer:134 | PersonalityAnalyzer: {'Technical Depth': 0.0, 'Problem Solving': 0.0, 'Team Collaboration': 0.0, 'Communication': 0.0, 'Leadership': 0.0, 'System Design': 0.0, 'Learning Ability': 0.0, 'Project Ownership': 0.0}
+2026-03-11 07:06:51 | INFO     | radar_chart_generator:78 | Radar chart saved: D:\temp\airesumeprt\outputs\skill_radar_chart.png
+2026-03-11 07:06:51 | INFO     | spider_chart_generator:65 | Spider chart saved to D:\temp\airesumeprt\outputs\personality_spider_chart.png
+2026-03-11 07:06:51 | INFO     | resume_improvement_advisor:191 | Generated 0 resume improvement suggestions.
+2026-03-11 07:06:51 | INFO     | interview_question_generator:279 | Interview difficulty: junior (combined=0.24)
+2026-03-11 07:06:51 | INFO     | interview_question_generator:339 | Generated 4 interview questions (difficulty=junior).
+2026-03-11 07:19:35 | INFO     | skill_extractor:129 | SkillExtractor ready: 387 vocab + 50 patterns.
+2026-03-11 07:19:35 | INFO     | skill_extractor:188 | Extracted 12 skills total.
+2026-03-11 07:19:37 | INFO     | groq_ai_client:85 | Groq AI client initialized successfully.
+2026-03-11 07:19:37 | INFO     | skill_normalizer:21 | SkillNormalizer: 143 aliases loaded.
+2026-03-11 07:19:37 | INFO     | skill_normalizer:21 | SkillNormalizer: 143 aliases loaded.
+2026-03-11 07:19:37 | INFO     | skill_gap_analyzer:39 | Gap: matching=3, missing=8, extra=9, coverage=27.27%
+2026-03-11 07:24:47 | INFO     | skill_extractor:129 | SkillExtractor ready: 387 vocab + 50 patterns.
+2026-03-11 07:24:47 | INFO     | skill_extractor:188 | Extracted 12 skills total.
+2026-03-11 07:24:49 | INFO     | groq_ai_client:85 | Groq AI client initialized successfully.
+2026-03-11 07:24:49 | INFO     | skill_normalizer:21 | SkillNormalizer: 143 aliases loaded.
+2026-03-11 07:24:49 | INFO     | skill_normalizer:21 | SkillNormalizer: 143 aliases loaded.
+2026-03-11 07:24:49 | INFO     | skill_gap_analyzer:39 | Gap: matching=3, missing=8, extra=9, coverage=27.27%
+2026-03-11 07:25:17 | INFO     | skill_extractor:129 | SkillExtractor ready: 387 vocab + 50 patterns.
+2026-03-11 07:25:18 | INFO     | skill_extractor:188 | Extracted 12 skills total.
+2026-03-11 07:25:19 | INFO     | groq_ai_client:85 | Groq AI client initialized successfully.
+2026-03-11 07:25:19 | INFO     | skill_normalizer:21 | SkillNormalizer: 143 aliases loaded.
+2026-03-11 07:25:19 | INFO     | skill_normalizer:21 | SkillNormalizer: 143 aliases loaded.
+2026-03-11 07:25:19 | INFO     | skill_gap_analyzer:39 | Gap: matching=3, missing=8, extra=9, coverage=27.27%
+2026-03-11 07:25:24 | INFO     | regression_model:61 | RegressionScoringModel trained on 17-sample synthetic dataset.
+2026-03-11 07:25:24 | WARNING  | regression_model:81 | Scoring aborted: resume_skills is empty. Cannot produce a valid score.
+2026-03-11 07:25:24 | DEBUG    | regression_model:94 | Score: 0.521 | match=0.50, missing=0.50, n_skills=10, kw=0.150, exp=0.30
+2026-03-11 07:25:24 | INFO     | personality_analyzer:134 | PersonalityAnalyzer: {'Technical Depth': 10.0, 'Problem Solving': 0.0, 'Team Collaboration': 0.0, 'Communication': 0.0, 'Leadership': 0.0, 'System Design': 10.0, 'Learning Ability': 0.0, 'Project Ownership': 10.0}
+2026-03-11 07:25:24 | INFO     | radar_chart_generator:78 | Radar chart saved: d:/temp/airesumeprt/outputs/skill_radar_chart.png
+2026-03-11 07:25:24 | INFO     | interview_question_generator:279 | Interview difficulty: mid (combined=0.56)
+2026-03-11 07:25:24 | INFO     | interview_question_generator:339 | Generated 8 interview questions (difficulty=mid).
+2026-03-11 07:27:58 | INFO     | groq_ai_client:85 | Groq AI client initialized successfully.
+2026-03-11 07:27:58 | INFO     | skill_extractor:129 | SkillExtractor ready: 387 vocab + 50 patterns.
+2026-03-11 07:27:58 | INFO     | skill_normalizer:21 | SkillNormalizer: 143 aliases loaded.
+2026-03-11 07:27:58 | INFO     | regression_model:61 | RegressionScoringModel trained on 17-sample synthetic dataset.
+2026-03-11 07:28:18 | INFO     | resume_parser:16 | Resume input: raw text paste.
+2026-03-11 07:28:27 | INFO     | main:151 | Analysis start: role='at engineer', company=''
+2026-03-11 07:28:27 | WARNING  | groq_ai_client:124 | Groq resume extraction failed: Error code: 400 - {'error': {'message': 'The model `llama3-70b-8192` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}
+2026-03-11 07:28:27 | INFO     | skill_extractor:188 | Extracted 0 skills total.
+2026-03-11 07:46:51 | INFO     | groq_ai_client:95 | Groq AI ready. Primary model: llama-3.3-70b-versatile
+2026-03-11 07:46:52 | INFO     | groq_ai_client:188 | Groq role skills for 'AI Engineer': ['python', 'tensorflow', 'pytorch', 'machine learning', 'deep learning', 'natural language processing', 'computer vision', 'docker']
+2026-03-11 07:46:52 | INFO     | groq_ai_client:160 | Groq resume extraction: 13 skills → ['python', 'java', 'c++', 'mysql', 'html', 'css', 'javascript', 'git']
+2026-03-11 07:46:52 | INFO     | resume_parser:149 | Resume word count: 80
+2026-03-11 07:46:52 | INFO     | skill_extractor:129 | SkillExtractor ready: 387 vocab + 50 patterns.
+2026-03-11 07:46:53 | INFO     | groq_ai_client:160 | Groq resume extraction: 13 skills → ['python', 'java', 'c++', 'mysql', 'html', 'css', 'javascript', 'git']
+2026-03-11 07:46:53 | INFO     | skill_extractor:188 | Extracted 15 skills total.
+2026-03-11 07:46:53 | INFO     | skill_normalizer:21 | SkillNormalizer: 143 aliases loaded.
+2026-03-11 07:46:53 | INFO     | skill_gap_analyzer:39 | Gap: matching=3, missing=7, extra=12, coverage=30.0%
+2026-03-11 08:02:27 | INFO     | groq_ai_client:95 | Groq AI ready. Primary model: llama-3.3-70b-versatile
+2026-03-11 08:02:27 | INFO     | groq_ai_client:188 | Groq role skills for 'AI Engineer': ['python', 'tensorflow', 'pytorch', 'machine learning', 'deep learning', 'natural language processing', 'computer vision', 'docker']
+2026-03-11 08:02:27 | INFO     | groq_ai_client:160 | Groq resume extraction: 13 skills → ['python', 'java', 'c++', 'mysql', 'html', 'css', 'javascript', 'git']
+2026-03-11 08:02:27 | INFO     | resume_parser:149 | Resume word count: 80
+2026-03-11 08:02:27 | INFO     | skill_extractor:129 | SkillExtractor ready: 387 vocab + 50 patterns.
+2026-03-11 08:02:28 | INFO     | groq_ai_client:160 | Groq resume extraction: 13 skills → ['python', 'java', 'c++', 'mysql', 'html', 'css', 'javascript', 'git']
+2026-03-11 08:02:28 | INFO     | skill_extractor:188 | Extracted 15 skills total.
+2026-03-11 08:02:28 | INFO     | skill_normalizer:21 | SkillNormalizer: 143 aliases loaded.
+2026-03-11 08:02:28 | INFO     | skill_gap_analyzer:39 | Gap: matching=3, missing=7, extra=12, coverage=30.0%
+2026-03-11 08:02:31 | INFO     | regression_model:61 | RegressionScoringModel trained on 17-sample synthetic dataset.
+2026-03-11 08:02:31 | WARNING  | regression_model:81 | Scoring aborted: resume_skills is empty. Cannot produce a valid score.
+2026-03-11 08:02:31 | DEBUG    | regression_model:94 | Score: 0.227 | match=0.20, missing=0.80, n_skills=4, kw=0.050, exp=0.10
+2026-03-11 08:02:31 | DEBUG    | regression_model:94 | Score: 0.533 | match=0.50, missing=0.50, n_skills=12, kw=0.150, exp=0.40
+2026-03-11 08:02:31 | DEBUG    | regression_model:94 | Score: 0.9 | match=0.85, missing=0.15, n_skills=20, kw=0.250, exp=0.80
+2026-03-11 08:02:31 | INFO     | probability_estimator:71 | Probability estimate: score=0.6, match=0.5, exp=0.4, competition=0.85 → 45.1%
+2026-03-11 08:02:31 | INFO     | radar_chart_generator:78 | Radar chart saved: d:/temp/airesumeprt/outputs/skill_radar_chart.png
+2026-03-11 08:02:31 | INFO     | personality_analyzer:134 | PersonalityAnalyzer: {'Technical Depth': 10.0, 'Problem Solving': 0.0, 'Team Collaboration': 0.0, 'Communication': 0.0, 'Leadership': 0.0, 'System Design': 10.0, 'Learning Ability': 0.0, 'Project Ownership': 10.0}
+2026-03-11 08:02:31 | INFO     | resume_improvement_advisor:191 | Generated 3 resume improvement suggestions.
+2026-03-11 08:03:42 | INFO     | groq_ai_client:95 | Groq AI ready. Primary model: llama-3.3-70b-versatile
+2026-03-11 08:03:42 | INFO     | groq_ai_client:188 | Groq role skills for 'AI Engineer': ['python', 'tensorflow', 'pytorch', 'scikit-learn', 'keras', 'deep learning', 'natural language processing', 'computer vision']
+2026-03-11 08:03:43 | INFO     | groq_ai_client:160 | Groq resume extraction: 13 skills → ['python', 'java', 'c++', 'mysql', 'html', 'css', 'javascript', 'git']
+2026-03-11 08:03:43 | INFO     | resume_parser:149 | Resume word count: 80
+2026-03-11 08:03:43 | INFO     | skill_extractor:129 | SkillExtractor ready: 387 vocab + 50 patterns.
+2026-03-11 08:03:43 | INFO     | groq_ai_client:160 | Groq resume extraction: 13 skills → ['python', 'java', 'c++', 'mysql', 'html', 'css', 'javascript', 'git']
+2026-03-11 08:03:43 | INFO     | skill_extractor:188 | Extracted 15 skills total.
+2026-03-11 08:03:43 | INFO     | skill_normalizer:21 | SkillNormalizer: 143 aliases loaded.
+2026-03-11 08:03:43 | INFO     | skill_gap_analyzer:39 | Gap: matching=3, missing=7, extra=12, coverage=30.0%
+2026-03-11 08:03:46 | INFO     | regression_model:61 | RegressionScoringModel trained on 17-sample synthetic dataset.
+2026-03-11 08:03:46 | WARNING  | regression_model:81 | Scoring aborted: resume_skills is empty. Cannot produce a valid score.
+2026-03-11 08:03:46 | DEBUG    | regression_model:94 | Score: 0.227 | match=0.20, missing=0.80, n_skills=4, kw=0.050, exp=0.10
+2026-03-11 08:03:46 | DEBUG    | regression_model:94 | Score: 0.533 | match=0.50, missing=0.50, n_skills=12, kw=0.150, exp=0.40
+2026-03-11 08:03:46 | DEBUG    | regression_model:94 | Score: 0.9 | match=0.85, missing=0.15, n_skills=20, kw=0.250, exp=0.80
+2026-03-11 08:03:46 | INFO     | probability_estimator:71 | Probability estimate: score=0.6, match=0.5, exp=0.4, competition=0.85 → 45.1%
+2026-03-11 08:03:47 | INFO     | radar_chart_generator:78 | Radar chart saved: d:/temp/airesumeprt/outputs/skill_radar_chart.png
+2026-03-11 08:03:47 | INFO     | personality_analyzer:134 | PersonalityAnalyzer: {'Technical Depth': 10.0, 'Problem Solving': 0.0, 'Team Collaboration': 0.0, 'Communication': 0.0, 'Leadership': 0.0, 'System Design': 10.0, 'Learning Ability': 0.0, 'Project Ownership': 10.0}
+2026-03-11 08:03:47 | INFO     | resume_improvement_advisor:191 | Generated 3 resume improvement suggestions.
+2026-03-11 08:03:47 | INFO     | interview_question_generator:279 | Interview difficulty: junior (combined=0.19)
+2026-03-11 08:03:47 | INFO     | interview_question_generator:339 | Generated 8 interview questions (difficulty=junior).
+2026-03-11 08:03:47 | INFO     | interview_question_generator:279 | Interview difficulty: senior (combined=0.78)
+2026-03-11 08:03:47 | INFO     | interview_question_generator:339 | Generated 8 interview questions (difficulty=senior).
+2026-03-11 08:07:48 | INFO     | resume_parser:16 | Resume input: raw text paste.
+2026-03-11 08:07:54 | INFO     | main:151 | Analysis start: role='ai engineer', company=''
+2026-03-11 08:07:54 | WARNING  | groq_ai_client:124 | Groq resume extraction failed: Error code: 400 - {'error': {'message': 'The model `llama3-70b-8192` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}
+2026-03-11 08:07:54 | INFO     | skill_extractor:188 | Extracted 0 skills total.
+2026-03-11 08:12:28 | INFO     | groq_ai_client:95 | Groq AI ready. Primary model: llama-3.3-70b-versatile
+2026-03-11 08:12:28 | INFO     | skill_extractor:129 | SkillExtractor ready: 387 vocab + 50 patterns.
+2026-03-11 08:12:28 | INFO     | skill_normalizer:21 | SkillNormalizer: 143 aliases loaded.
+2026-03-11 08:12:28 | INFO     | resume_parser:149 | Resume word count: 142
+2026-03-11 08:12:29 | INFO     | groq_ai_client:160 | Groq resume extraction: 16 skills → ['python', 'java', 'c++', 'mysql', 'html', 'css', 'javascript', 'git']
+2026-03-11 08:12:29 | INFO     | skill_extractor:188 | Extracted 18 skills total.
+2026-03-11 08:12:29 | DEBUG    | internet_job_scraper:164 | DDG HTTP 202 for 'skills required for AI Engineer job'
+2026-03-11 08:12:30 | DEBUG    | internet_job_scraper:164 | DDG HTTP 202 for 'top technical skills AI Engineer 2024'
+2026-03-11 08:12:31 | DEBUG    | internet_job_scraper:164 | DDG HTTP 202 for 'AI Engineer job description requirements'
+2026-03-11 08:12:32 | DEBUG    | internet_job_scraper:164 | DDG HTTP 202 for 'how to become AI Engineer skills needed'
+2026-03-11 08:12:33 | INFO     | groq_ai_client:188 | Groq role skills for 'AI Engineer': ['python', 'tensorflow', 'pytorch', 'machine learning', 'deep learning', 'natural language processing', 'computer vision', 'docker']
+2026-03-11 08:12:33 | INFO     | internet_job_scraper:87 | Groq provided 20 role skills for 'AI Engineer'.
+2026-03-11 08:12:33 | INFO     | cache_manager:49 | Cache SET for 'ai engineer' with 20 skills.
+2026-03-11 08:12:33 | INFO     | groq_ai_client:160 | Groq resume extraction: 17 skills → ['python', 'java', 'c++', 'mysql', 'html', 'css', 'javascript', 'git']
+2026-03-11 08:12:33 | INFO     | skill_extractor:188 | Extracted 18 skills total.
+2026-03-11 08:12:33 | INFO     | skill_gap_analyzer:39 | Gap: matching=4, missing=16, extra=14, coverage=20.0%
+2026-03-11 08:12:33 | INFO     | skill_priority_ranker:87 | Ranked 16 missing skills by priority.
+2026-03-11 08:12:33 | INFO     | groq_ai_client:160 | Groq resume extraction: 16 skills → ['python', 'java', 'c++', 'mysql', 'html', 'css', 'javascript', 'git']
+2026-03-11 08:12:33 | INFO     | skill_extractor:188 | Extracted 18 skills total.
+2026-03-11 08:12:33 | INFO     | regression_model:61 | RegressionScoringModel trained on 17-sample synthetic dataset.
+2026-03-11 08:12:33 | DEBUG    | regression_model:94 | Score: 0.21 | match=0.20, missing=0.80, n_skills=18, kw=0.162, exp=0.17
+2026-03-11 08:12:33 | INFO     | probability_estimator:71 | Probability estimate: score=0.21, match=0.2, exp=0.17, competition=0.85 → 8.0%
+2026-03-11 08:12:33 | INFO     | personality_analyzer:134 | PersonalityAnalyzer: {'Technical Depth': 10.0, 'Problem Solving': 0.0, 'Team Collaboration': 9.3, 'Communication': 4.6, 'Leadership': 0.0, 'System Design': 10.0, 'Learning Ability': 0.0, 'Project Ownership': 10.0}
+2026-03-11 08:12:34 | INFO     | radar_chart_generator:78 | Radar chart saved: d:/temp/airesumeprt/outputs\skill_radar_chart.png
+2026-03-11 08:12:34 | INFO     | spider_chart_generator:65 | Spider chart saved to d:/temp/airesumeprt/outputs\personality_spider_chart.png
+2026-03-11 08:12:34 | INFO     | resume_improvement_advisor:191 | Generated 6 resume improvement suggestions.
+2026-03-11 08:12:34 | INFO     | interview_question_generator:279 | Interview difficulty: junior (combined=0.19)
+2026-03-11 08:12:34 | INFO     | interview_question_generator:339 | Generated 7 interview questions (difficulty=junior).
+2026-03-11 08:14:01 | INFO     | groq_ai_client:95 | Groq AI ready. Primary model: llama-3.3-70b-versatile
+2026-03-11 08:14:01 | INFO     | skill_extractor:129 | SkillExtractor ready: 387 vocab + 50 patterns.
+2026-03-11 08:14:01 | INFO     | skill_normalizer:21 | SkillNormalizer: 143 aliases loaded.
+2026-03-11 08:14:02 | INFO     | resume_parser:149 | Resume word count: 142
+2026-03-11 08:14:02 | INFO     | groq_ai_client:160 | Groq resume extraction: 17 skills → ['python', 'java', 'c++', 'mysql', 'html', 'css', 'javascript', 'git']
+2026-03-11 08:14:02 | INFO     | skill_extractor:188 | Extracted 18 skills total.
+2026-03-11 08:14:02 | INFO     | cache_manager:38 | Cache HIT for 'ai engineer' (20 skills cached).
+2026-03-11 08:14:02 | INFO     | groq_ai_client:160 | Groq resume extraction: 17 skills → ['python', 'java', 'c++', 'mysql', 'html', 'css', 'javascript', 'git']
+2026-03-11 08:14:02 | INFO     | skill_extractor:188 | Extracted 18 skills total.
+2026-03-11 08:14:02 | INFO     | skill_gap_analyzer:39 | Gap: matching=4, missing=16, extra=14, coverage=20.0%
+2026-03-11 08:14:02 | INFO     | skill_priority_ranker:87 | Ranked 16 missing skills by priority.
+2026-03-11 08:14:03 | INFO     | groq_ai_client:160 | Groq resume extraction: 17 skills → ['python', 'java', 'c++', 'mysql', 'html', 'css', 'javascript', 'git']
+2026-03-11 08:14:03 | INFO     | skill_extractor:188 | Extracted 18 skills total.
+2026-03-11 08:14:03 | INFO     | regression_model:61 | RegressionScoringModel trained on 17-sample synthetic dataset.
+2026-03-11 08:14:03 | DEBUG    | regression_model:94 | Score: 0.21 | match=0.20, missing=0.80, n_skills=18, kw=0.162, exp=0.17
+2026-03-11 08:14:03 | INFO     | probability_estimator:71 | Probability estimate: score=0.21, match=0.2, exp=0.17, competition=0.85 → 8.0%
+2026-03-11 08:14:03 | INFO     | personality_analyzer:134 | PersonalityAnalyzer: {'Technical Depth': 10.0, 'Problem Solving': 0.0, 'Team Collaboration': 9.3, 'Communication': 4.6, 'Leadership': 0.0, 'System Design': 10.0, 'Learning Ability': 0.0, 'Project Ownership': 10.0}
+2026-03-11 08:14:03 | INFO     | radar_chart_generator:78 | Radar chart saved: d:/temp/airesumeprt/outputs\skill_radar_chart.png
+2026-03-11 08:14:04 | INFO     | spider_chart_generator:65 | Spider chart saved to d:/temp/airesumeprt/outputs\personality_spider_chart.png
+2026-03-11 08:14:04 | INFO     | resume_improvement_advisor:191 | Generated 6 resume improvement suggestions.
+2026-03-11 08:14:04 | INFO     | interview_question_generator:279 | Interview difficulty: junior (combined=0.19)
+2026-03-11 08:14:04 | INFO     | interview_question_generator:339 | Generated 7 interview questions (difficulty=junior).
+2026-03-11 08:14:04 | INFO     | report_generator:236 | Report saved: d:/temp/airesumeprt/outputs\analysis_report.txt
+2026-03-11 08:14:40 | INFO     | resume_parser:16 | Resume input: raw text paste.
+2026-03-11 08:14:47 | INFO     | main:151 | Analysis start: role='ai engineer', company=''
+2026-03-11 08:14:47 | WARNING  | groq_ai_client:124 | Groq resume extraction failed: Error code: 400 - {'error': {'message': 'The model `llama3-70b-8192` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}
+2026-03-11 08:14:47 | INFO     | skill_extractor:188 | Extracted 0 skills total.
+2026-03-11 09:34:35 | INFO     | groq_ai_client:95 | Groq AI ready. Primary model: llama-3.3-70b-versatile
+2026-03-11 09:34:35 | INFO     | skill_extractor:129 | SkillExtractor ready: 387 vocab + 50 patterns.
+2026-03-11 09:34:35 | INFO     | skill_normalizer:21 | SkillNormalizer: 143 aliases loaded.
+2026-03-11 09:34:35 | INFO     | regression_model:61 | RegressionScoringModel trained on 17-sample synthetic dataset.
+2026-03-11 09:49:25 | INFO     | resume_parser:149 | Resume word count: 1
+2026-03-11 09:49:32 | INFO     | main:151 | Analysis start: role='ai engineer', company=''
+2026-03-11 09:49:39 | INFO     | groq_ai_client:160 | Groq resume extraction: 0 skills → []
+2026-03-11 09:49:39 | INFO     | skill_extractor:188 | Extracted 0 skills total.
+2026-03-11 10:30:54 | INFO     | resume_parser:149 | Resume word count: 1
+2026-03-11 10:31:21 | INFO     | main:151 | Analysis start: role='Ai engineer', company='sahana system ltd'
+2026-03-11 10:31:22 | INFO     | groq_ai_client:160 | Groq resume extraction: 0 skills → []
+2026-03-11 10:31:22 | INFO     | skill_extractor:188 | Extracted 0 skills total.
+2026-03-11 10:32:18 | INFO     | resume_parser:149 | Resume word count: 1
+2026-03-11 10:32:24 | INFO     | main:151 | Analysis start: role='Ai engineer', company=''
+2026-03-11 10:32:30 | INFO     | groq_ai_client:160 | Groq resume extraction: 0 skills → []
+2026-03-11 10:32:30 | INFO     | skill_extractor:188 | Extracted 0 skills total.
+2026-03-11 10:33:39 | INFO     | resume_parser:85 | pdfminer OK: 3798 chars.
+2026-03-11 10:33:39 | INFO     | resume_parser:149 | Resume word count: 521
+2026-03-11 10:33:48 | INFO     | main:151 | Analysis start: role='Ai Engineer', company=''
+2026-03-11 10:33:49 | INFO     | groq_ai_client:160 | Groq resume extraction: 32 skills → ['python', 'c++', 'java', 'scikit-learn', 'tensorflow', 'keras', 'pytorch', 'pandas']
+2026-03-11 10:33:49 | INFO     | skill_extractor:188 | Extracted 43 skills total.
+2026-03-11 10:33:49 | INFO     | cache_manager:38 | Cache HIT for 'ai engineer' (20 skills cached).
+2026-03-11 10:33:49 | INFO     | skill_gap_analyzer:39 | Gap: matching=13, missing=7, extra=27, coverage=65.0%
+2026-03-11 10:33:49 | INFO     | skill_priority_ranker:87 | Ranked 7 missing skills by priority.
+2026-03-11 10:33:50 | INFO     | groq_ai_client:160 | Groq resume extraction: 32 skills → ['python', 'c++', 'java', 'scikit-learn', 'tensorflow', 'keras', 'pytorch', 'pandas']
+2026-03-11 10:33:50 | INFO     | skill_extractor:188 | Extracted 43 skills total.
+2026-03-11 10:33:50 | DEBUG    | regression_model:94 | Score: 0.639 | match=0.65, missing=0.35, n_skills=40, kw=0.113, exp=0.37
+2026-03-11 10:33:50 | INFO     | probability_estimator:71 | Probability estimate: score=0.639, match=0.65, exp=0.37, competition=0.85 → 55.1%
+2026-03-11 10:33:50 | INFO     | personality_analyzer:134 | PersonalityAnalyzer: {'Technical Depth': 10.0, 'Problem Solving': 0.0, 'Team Collaboration': 0.0, 'Communication': 0.0, 'Leadership': 3.9, 'System Design': 0.0, 'Learning Ability': 8.0, 'Project Ownership': 10.0}
+2026-03-11 10:33:51 | INFO     | radar_chart_generator:78 | Radar chart saved: D:\temp\airesumeprt\outputs\skill_radar_chart.png
+2026-03-11 10:33:52 | INFO     | spider_chart_generator:65 | Spider chart saved to D:\temp\airesumeprt\outputs\personality_spider_chart.png
+2026-03-11 10:33:52 | INFO     | resume_improvement_advisor:191 | Generated 6 resume improvement suggestions.
+2026-03-11 10:33:52 | INFO     | interview_question_generator:279 | Interview difficulty: mid (combined=0.53)
+2026-03-11 10:33:52 | INFO     | interview_question_generator:339 | Generated 14 interview questions (difficulty=mid).
+2026-03-11 10:33:52 | INFO     | report_generator:236 | Report saved: D:\temp\airesumeprt\outputs\analysis_report.txt
+2026-03-11 11:44:49 | INFO     | groq_ai_client:95 | Groq AI ready. Primary model: llama-3.3-70b-versatile
+2026-03-11 11:57:53 | INFO     | groq_ai_client:95 | Groq AI ready. Primary model: llama-3.3-70b-versatile
+2026-03-11 11:58:16 | INFO     | groq_ai_client:95 | Groq AI ready. Primary model: llama-3.3-70b-versatile
+2026-03-11 11:58:51 | INFO     | groq_ai_client:160 | Groq resume extraction: 3 skills → ['react', 'python', 'sql']
+2026-03-11 11:59:16 | INFO     | groq_ai_client:95 | Groq AI ready. Primary model: llama-3.3-70b-versatile
+2026-03-11 11:59:16 | INFO     | skill_extractor:129 | SkillExtractor ready: 387 vocab + 50 patterns.
+2026-03-11 11:59:16 | INFO     | skill_normalizer:21 | SkillNormalizer: 143 aliases loaded.
+2026-03-11 11:59:16 | INFO     | regression_model:61 | RegressionScoringModel trained on 17-sample synthetic dataset.
+2026-03-11 12:00:31 | INFO     | groq_ai_client:95 | Groq AI ready. Primary model: llama-3.3-70b-versatile
+2026-03-11 12:13:53 | INFO     | groq_ai_client:95 | Groq AI ready. Primary model: llama-3.3-70b-versatile
+2026-03-11 12:13:53 | INFO     | skill_extractor:129 | SkillExtractor ready: 387 vocab + 50 patterns.
+2026-03-11 12:13:53 | INFO     | skill_normalizer:21 | SkillNormalizer: 143 aliases loaded.
+2026-03-11 12:13:53 | INFO     | regression_model:61 | RegressionScoringModel trained on 17-sample synthetic dataset.
+2026-03-11 12:15:54 | INFO     | groq_ai_client:95 | Groq AI ready. Primary model: llama-3.3-70b-versatile
+2026-03-11 12:15:54 | INFO     | skill_extractor:129 | SkillExtractor ready: 387 vocab + 50 patterns.
+2026-03-11 12:15:54 | INFO     | skill_normalizer:21 | SkillNormalizer: 143 aliases loaded.
+2026-03-11 12:15:54 | INFO     | regression_model:61 | RegressionScoringModel trained on 17-sample synthetic dataset.
+2026-03-11 12:17:12 | INFO     | groq_ai_client:95 | Groq AI ready. Primary model: llama-3.3-70b-versatile
+2026-03-11 12:17:12 | INFO     | skill_extractor:129 | SkillExtractor ready: 387 vocab + 50 patterns.
+2026-03-11 12:17:12 | INFO     | skill_normalizer:21 | SkillNormalizer: 143 aliases loaded.
+2026-03-11 12:17:12 | INFO     | regression_model:61 | RegressionScoringModel trained on 17-sample synthetic dataset.
+2026-03-11 12:18:29 | INFO     | groq_ai_client:95 | Groq AI ready. Primary model: llama-3.3-70b-versatile
+2026-03-11 12:18:29 | INFO     | skill_extractor:129 | SkillExtractor ready: 387 vocab + 50 patterns.
+2026-03-11 12:18:29 | INFO     | skill_normalizer:21 | SkillNormalizer: 143 aliases loaded.
+2026-03-11 12:18:29 | INFO     | regression_model:61 | RegressionScoringModel trained on 17-sample synthetic dataset.
+2026-03-11 12:19:17 | INFO     | groq_ai_client:95 | Groq AI ready. Primary model: llama-3.3-70b-versatile
+2026-03-11 12:19:17 | INFO     | skill_extractor:129 | SkillExtractor ready: 387 vocab + 50 patterns.
+2026-03-11 12:19:17 | INFO     | skill_normalizer:21 | SkillNormalizer: 143 aliases loaded.
+2026-03-11 12:19:17 | INFO     | regression_model:61 | RegressionScoringModel trained on 17-sample synthetic dataset.
+2026-03-11 12:34:22 | INFO     | resume_parser:85 | pdfminer OK: 3798 chars.
+2026-03-11 12:34:22 | INFO     | resume_parser:149 | Resume word count: 521
+2026-03-11 12:34:22 | INFO     | groq_ai_client:95 | Groq AI ready. Primary model: llama-3.3-70b-versatile
+2026-03-11 12:34:22 | INFO     | skill_extractor:129 | SkillExtractor ready: 387 vocab + 50 patterns.
+2026-03-11 12:34:22 | INFO     | skill_normalizer:21 | SkillNormalizer: 143 aliases loaded.
+2026-03-11 12:34:24 | INFO     | groq_ai_client:160 | Groq resume extraction: 32 skills → ['python', 'c++', 'java', 'scikit-learn', 'tensorflow', 'keras', 'pytorch', 'pandas']
+2026-03-11 12:34:24 | INFO     | skill_extractor:188 | Extracted 43 skills total.
+2026-03-11 12:34:24 | INFO     | cache_manager:38 | Cache HIT for 'ai engineer' (20 skills cached).
+2026-03-11 12:34:24 | INFO     | groq_ai_client:160 | Groq resume extraction: 30 skills → ['python', 'c++', 'java', 'scikit-learn', 'tensorflow', 'keras', 'pytorch', 'pandas']
+2026-03-11 12:34:24 | INFO     | skill_extractor:188 | Extracted 43 skills total.
+2026-03-11 12:34:24 | INFO     | skill_gap_analyzer:39 | Gap: matching=13, missing=7, extra=27, coverage=65.0%
+2026-03-11 12:34:24 | INFO     | skill_priority_ranker:87 | Ranked 7 missing skills by priority.
+2026-03-11 12:34:25 | INFO     | groq_ai_client:160 | Groq resume extraction: 30 skills → ['python', 'c++', 'java', 'scikit-learn', 'tensorflow', 'keras', 'pytorch', 'pandas']
+2026-03-11 12:34:25 | INFO     | skill_extractor:188 | Extracted 43 skills total.
+2026-03-11 12:34:25 | INFO     | regression_model:61 | RegressionScoringModel trained on 17-sample synthetic dataset.
+2026-03-11 12:34:25 | DEBUG    | regression_model:94 | Score: 0.639 | match=0.65, missing=0.35, n_skills=40, kw=0.113, exp=0.37
+2026-03-11 12:34:25 | INFO     | probability_estimator:71 | Probability estimate: score=0.639, match=0.65, exp=0.37, competition=0.85 → 55.1%
+2026-03-11 12:34:25 | INFO     | personality_analyzer:134 | PersonalityAnalyzer: {'Technical Depth': 10.0, 'Problem Solving': 0.0, 'Team Collaboration': 0.0, 'Communication': 0.0, 'Leadership': 3.9, 'System Design': 0.0, 'Learning Ability': 8.0, 'Project Ownership': 10.0}
+2026-03-11 12:34:26 | INFO     | radar_chart_generator:78 | Radar chart saved: outputs\skill_radar_chart.png
+2026-03-11 12:34:27 | INFO     | spider_chart_generator:65 | Spider chart saved to outputs\personality_spider_chart.png
+2026-03-11 12:34:27 | INFO     | resume_improvement_advisor:191 | Generated 6 resume improvement suggestions.
+2026-03-11 12:34:27 | INFO     | interview_question_generator:279 | Interview difficulty: mid (combined=0.53)
+2026-03-11 12:34:27 | INFO     | interview_question_generator:339 | Generated 14 interview questions (difficulty=mid).
+2026-03-11 12:34:27 | INFO     | report_generator:236 | Report saved: outputs\analysis_report.txt
+2026-03-11 12:48:24 | INFO     | resume_parser:85 | pdfminer OK: 3798 chars.
+2026-03-11 12:48:24 | INFO     | resume_parser:149 | Resume word count: 521
+2026-03-11 12:48:25 | INFO     | groq_ai_client:95 | Groq AI ready. Primary model: llama-3.3-70b-versatile
+2026-03-11 12:48:25 | INFO     | skill_extractor:129 | SkillExtractor ready: 387 vocab + 50 patterns.
+2026-03-11 12:48:25 | INFO     | skill_normalizer:21 | SkillNormalizer: 143 aliases loaded.
+2026-03-11 12:48:27 | INFO     | groq_ai_client:160 | Groq resume extraction: 30 skills → ['python', 'c++', 'java', 'scikit-learn', 'tensorflow', 'keras', 'pytorch', 'pandas']
+2026-03-11 12:48:27 | INFO     | skill_extractor:188 | Extracted 43 skills total.
+2026-03-11 12:48:29 | DEBUG    | internet_job_scraper:164 | DDG HTTP 202 for 'google sde tech stack requirements'
+2026-03-11 12:48:39 | DEBUG    | internet_job_scraper:164 | DDG HTTP 202 for 'skills required for sde job'
+2026-03-11 12:48:40 | DEBUG    | internet_job_scraper:164 | DDG HTTP 202 for 'top technical skills sde 2024'
+2026-03-11 12:48:43 | DEBUG    | internet_job_scraper:164 | DDG HTTP 202 for 'sde job description requirements'
+2026-03-11 12:48:44 | INFO     | groq_ai_client:188 | Groq role skills for 'sde': ['java', 'c++', 'python', 'javascript', 'go', 'cloud computing', 'aws', 'azure']
+2026-03-11 12:48:44 | INFO     | internet_job_scraper:87 | Groq provided 23 role skills for 'sde'.
+2026-03-11 12:48:44 | INFO     | cache_manager:49 | Cache SET for 'sde__google' with 23 skills.
+2026-03-11 12:48:45 | INFO     | groq_ai_client:160 | Groq resume extraction: 32 skills → ['python', 'c++', 'java', 'scikit-learn', 'tensorflow', 'keras', 'pytorch', 'pandas']
+2026-03-11 12:48:45 | INFO     | skill_extractor:188 | Extracted 43 skills total.
+2026-03-11 12:48:45 | INFO     | skill_gap_analyzer:39 | Gap: matching=8, missing=14, extra=32, coverage=36.36%
+2026-03-11 12:48:45 | INFO     | skill_priority_ranker:87 | Ranked 14 missing skills by priority.
+2026-03-11 12:48:45 | INFO     | groq_ai_client:160 | Groq resume extraction: 30 skills → ['python', 'c++', 'java', 'scikit-learn', 'tensorflow', 'keras', 'pytorch', 'pandas']
+2026-03-11 12:48:45 | INFO     | skill_extractor:188 | Extracted 43 skills total.
+2026-03-11 12:48:45 | INFO     | regression_model:61 | RegressionScoringModel trained on 17-sample synthetic dataset.
+2026-03-11 12:48:45 | DEBUG    | regression_model:94 | Score: 0.37 | match=0.36, missing=0.64, n_skills=40, kw=0.113, exp=0.37
+2026-03-11 12:48:45 | INFO     | probability_estimator:71 | Probability estimate: score=0.37, match=0.3636, exp=0.37, competition=0.7 → 25.3%
+2026-03-11 12:48:45 | INFO     | personality_analyzer:134 | PersonalityAnalyzer: {'Technical Depth': 10.0, 'Problem Solving': 0.0, 'Team Collaboration': 0.0, 'Communication': 0.0, 'Leadership': 3.9, 'System Design': 0.0, 'Learning Ability': 8.0, 'Project Ownership': 10.0}
+2026-03-11 12:48:46 | INFO     | radar_chart_generator:78 | Radar chart saved: outputs\skill_radar_chart.png
+2026-03-11 12:48:47 | INFO     | spider_chart_generator:65 | Spider chart saved to outputs\personality_spider_chart.png
+2026-03-11 12:48:47 | INFO     | resume_improvement_advisor:191 | Generated 6 resume improvement suggestions.
+2026-03-11 12:48:47 | INFO     | interview_question_generator:279 | Interview difficulty: mid (combined=0.37)
+2026-03-11 12:48:47 | INFO     | interview_question_generator:339 | Generated 12 interview questions (difficulty=mid).
+2026-03-11 12:48:47 | INFO     | report_generator:236 | Report saved: outputs\analysis_report.txt
+2026-03-11 12:50:17 | INFO     | resume_parser:85 | pdfminer OK: 3798 chars.
+2026-03-11 12:50:17 | INFO     | resume_parser:149 | Resume word count: 521
+2026-03-11 12:50:18 | INFO     | groq_ai_client:95 | Groq AI ready. Primary model: llama-3.3-70b-versatile
+2026-03-11 12:50:18 | INFO     | skill_extractor:129 | SkillExtractor ready: 387 vocab + 50 patterns.
+2026-03-11 12:50:18 | INFO     | skill_normalizer:21 | SkillNormalizer: 143 aliases loaded.
+2026-03-11 12:50:20 | INFO     | groq_ai_client:160 | Groq resume extraction: 32 skills → ['python', 'c++', 'java', 'scikit-learn', 'tensorflow', 'keras', 'pytorch', 'pandas']
+2026-03-11 12:50:20 | INFO     | skill_extractor:188 | Extracted 43 skills total.
+2026-03-11 12:50:20 | INFO     | cache_manager:38 | Cache HIT for 'sde__google' (23 skills cached).
+2026-03-11 12:50:21 | INFO     | groq_ai_client:160 | Groq resume extraction: 32 skills → ['python', 'c++', 'java', 'scikit-learn', 'tensorflow', 'keras', 'pytorch', 'pandas']
+2026-03-11 12:50:21 | INFO     | skill_extractor:188 | Extracted 43 skills total.
+2026-03-11 12:50:21 | INFO     | skill_gap_analyzer:39 | Gap: matching=8, missing=14, extra=32, coverage=36.36%
+2026-03-11 12:50:21 | INFO     | skill_priority_ranker:87 | Ranked 14 missing skills by priority.
+2026-03-11 12:50:22 | INFO     | groq_ai_client:160 | Groq resume extraction: 32 skills → ['python', 'c++', 'java', 'scikit-learn', 'tensorflow', 'keras', 'pytorch', 'pandas']
+2026-03-11 12:50:22 | INFO     | skill_extractor:188 | Extracted 43 skills total.
+2026-03-11 12:50:22 | INFO     | regression_model:61 | RegressionScoringModel trained on 17-sample synthetic dataset.
+2026-03-11 12:50:22 | DEBUG    | regression_model:94 | Score: 0.37 | match=0.36, missing=0.64, n_skills=40, kw=0.113, exp=0.37
+2026-03-11 12:50:22 | INFO     | probability_estimator:71 | Probability estimate: score=0.37, match=0.3636, exp=0.37, competition=0.7 → 25.3%
+2026-03-11 12:50:22 | INFO     | personality_analyzer:134 | PersonalityAnalyzer: {'Technical Depth': 10.0, 'Problem Solving': 0.0, 'Team Collaboration': 0.0, 'Communication': 0.0, 'Leadership': 3.9, 'System Design': 0.0, 'Learning Ability': 8.0, 'Project Ownership': 10.0}
+2026-03-11 12:50:23 | INFO     | radar_chart_generator:78 | Radar chart saved: outputs\skill_radar_chart.png
+2026-03-11 12:50:23 | INFO     | spider_chart_generator:65 | Spider chart saved to outputs\personality_spider_chart.png
+2026-03-11 12:50:23 | INFO     | resume_improvement_advisor:191 | Generated 6 resume improvement suggestions.
+2026-03-11 12:50:23 | INFO     | interview_question_generator:279 | Interview difficulty: mid (combined=0.37)
+2026-03-11 12:50:23 | INFO     | interview_question_generator:339 | Generated 12 interview questions (difficulty=mid).
+2026-03-11 12:50:23 | INFO     | report_generator:236 | Report saved: outputs\analysis_report.txt
+2026-03-11 13:41:53 | INFO     | resume_parser:85 | pdfminer OK: 3798 chars.
+2026-03-11 13:41:53 | INFO     | resume_parser:149 | Resume word count: 521
+2026-03-11 13:41:54 | INFO     | groq_ai_client:95 | Groq AI ready. Primary model: llama-3.3-70b-versatile
+2026-03-11 13:41:54 | INFO     | skill_extractor:129 | SkillExtractor ready: 387 vocab + 50 patterns.
+2026-03-11 13:41:54 | INFO     | skill_normalizer:21 | SkillNormalizer: 143 aliases loaded.
+2026-03-11 13:41:56 | INFO     | groq_ai_client:160 | Groq resume extraction: 32 skills → ['python', 'c++', 'java', 'scikit-learn', 'tensorflow', 'keras', 'pytorch', 'pandas']
+2026-03-11 13:41:56 | INFO     | skill_extractor:188 | Extracted 43 skills total.
+2026-03-11 13:41:59 | DEBUG    | internet_job_scraper:164 | DDG HTTP 202 for 'sahana SDE tech stack requirements'
+2026-03-11 13:42:08 | DEBUG    | internet_job_scraper:164 | DDG HTTP 202 for 'skills required for SDE job'
+2026-03-11 13:42:11 | DEBUG    | internet_job_scraper:164 | DDG HTTP 202 for 'top technical skills SDE 2024'
+2026-03-11 13:42:14 | DEBUG    | internet_job_scraper:164 | DDG HTTP 202 for 'SDE job description requirements'
+2026-03-11 13:42:15 | INFO     | groq_ai_client:188 | Groq role skills for 'SDE': ['java', 'python', 'aws', 'azure', 'docker', 'kubernetes', 'spring boot', 'restful api']
+2026-03-11 13:42:15 | INFO     | internet_job_scraper:87 | Groq provided 20 role skills for 'SDE'.
+2026-03-11 13:42:15 | INFO     | cache_manager:49 | Cache SET for 'sde__sahana' with 20 skills.
+2026-03-11 13:42:16 | INFO     | groq_ai_client:160 | Groq resume extraction: 30 skills → ['python', 'c++', 'java', 'scikit-learn', 'tensorflow', 'keras', 'pytorch', 'pandas']
+2026-03-11 13:42:16 | INFO     | skill_extractor:188 | Extracted 43 skills total.
+2026-03-11 13:42:16 | INFO     | skill_gap_analyzer:39 | Gap: matching=4, missing=16, extra=36, coverage=20.0%
+2026-03-11 13:42:16 | INFO     | skill_priority_ranker:87 | Ranked 16 missing skills by priority.
+2026-03-11 13:42:17 | INFO     | groq_ai_client:160 | Groq resume extraction: 32 skills → ['python', 'c++', 'java', 'scikit-learn', 'tensorflow', 'keras', 'pytorch', 'pandas']
+2026-03-11 13:42:17 | INFO     | skill_extractor:188 | Extracted 43 skills total.
+2026-03-11 13:42:17 | INFO     | regression_model:61 | RegressionScoringModel trained on 17-sample synthetic dataset.
+2026-03-11 13:42:17 | DEBUG    | regression_model:94 | Score: 0.217 | match=0.20, missing=0.80, n_skills=40, kw=0.113, exp=0.37
+2026-03-11 13:42:17 | INFO     | probability_estimator:71 | Probability estimate: score=0.217, match=0.2, exp=0.37, competition=0.7 → 12.5%
+2026-03-11 13:42:17 | INFO     | personality_analyzer:134 | PersonalityAnalyzer: {'Technical Depth': 10.0, 'Problem Solving': 0.0, 'Team Collaboration': 0.0, 'Communication': 0.0, 'Leadership': 3.9, 'System Design': 0.0, 'Learning Ability': 8.0, 'Project Ownership': 10.0}
+2026-03-11 13:42:18 | INFO     | radar_chart_generator:78 | Radar chart saved: outputs\skill_radar_chart.png
+2026-03-11 13:42:18 | INFO     | spider_chart_generator:65 | Spider chart saved to outputs\personality_spider_chart.png
+2026-03-11 13:42:18 | INFO     | resume_improvement_advisor:191 | Generated 6 resume improvement suggestions.
+2026-03-11 13:42:18 | INFO     | interview_question_generator:279 | Interview difficulty: junior (combined=0.28)
+2026-03-11 13:42:18 | INFO     | interview_question_generator:339 | Generated 14 interview questions (difficulty=junior).
+2026-03-11 13:42:18 | INFO     | report_generator:236 | Report saved: outputs\analysis_report.txt
+2026-03-11 14:36:40 | INFO     | resume_parser:85 | pdfminer OK: 3798 chars.
+2026-03-11 14:36:40 | INFO     | resume_parser:149 | Resume word count: 521
+2026-03-11 14:36:41 | INFO     | groq_ai_client:95 | Groq AI ready. Primary model: llama-3.3-70b-versatile
+2026-03-11 14:36:41 | INFO     | skill_extractor:129 | SkillExtractor ready: 387 vocab + 50 patterns.
+2026-03-11 14:36:41 | INFO     | skill_normalizer:21 | SkillNormalizer: 143 aliases loaded.
+2026-03-11 14:36:42 | WARNING  | groq_ai_client:127 | Groq API error with llama-3.3-70b-versatile: Connection error.
+2026-03-11 14:36:42 | INFO     | skill_extractor:188 | Extracted 36 skills total.
+2026-03-11 14:36:42 | WARNING  | internet_job_scraper:190 | DDG request failed for 'Sahana pvt ltd Ai engineer tech stack requirements': HTTPSConnectionPool(host='html.duckduckgo.com', port=443): Max retries exceeded with url: /html/?q=Sahana+pvt+ltd+Ai+engineer+tech+stack+requirements (Caused by NameResolutionError("HTTPSConnection(host='html.duckduckgo.com', port=443): Failed to resolve 'html.duckduckgo.com' ([Errno 11001] getaddrinfo failed)"))
+2026-03-11 14:36:43 | WARNING  | internet_job_scraper:190 | DDG request failed for 'skills required for Ai engineer job': HTTPSConnectionPool(host='html.duckduckgo.com', port=443): Max retries exceeded with url: /html/?q=skills+required+for+Ai+engineer+job (Caused by NameResolutionError("HTTPSConnection(host='html.duckduckgo.com', port=443): Failed to resolve 'html.duckduckgo.com' ([Errno 11001] getaddrinfo failed)"))
+2026-03-11 14:36:43 | WARNING  | internet_job_scraper:190 | DDG request failed for 'top technical skills Ai engineer 2024': HTTPSConnectionPool(host='html.duckduckgo.com', port=443): Max retries exceeded with url: /html/?q=top+technical+skills+Ai+engineer+2024 (Caused by NameResolutionError("HTTPSConnection(host='html.duckduckgo.com', port=443): Failed to resolve 'html.duckduckgo.com' ([Errno 11001] getaddrinfo failed)"))
+2026-03-11 14:36:43 | WARNING  | internet_job_scraper:190 | DDG request failed for 'Ai engineer job description requirements': HTTPSConnectionPool(host='html.duckduckgo.com', port=443): Max retries exceeded with url: /html/?q=Ai+engineer+job+description+requirements (Caused by NameResolutionError("HTTPSConnection(host='html.duckduckgo.com', port=443): Failed to resolve 'html.duckduckgo.com' ([Errno 11001] getaddrinfo failed)"))
+2026-03-11 14:37:09 | WARNING  | groq_ai_client:127 | Groq API error with llama-3.3-70b-versatile: Connection error.
+2026-03-11 14:37:09 | WARNING  | internet_job_scraper:91 | Both internet and Groq failed for role 'Ai engineer'.
+2026-03-11 14:37:09 | INFO     | skill_gap_analyzer:39 | Gap: matching=35, missing=0, extra=0, coverage=100.0%
+2026-03-11 14:37:09 | INFO     | skill_priority_ranker:87 | Ranked 0 missing skills by priority.
+2026-03-11 14:37:11 | WARNING  | groq_ai_client:127 | Groq API error with llama-3.3-70b-versatile: Connection error.
+2026-03-11 14:37:11 | INFO     | skill_extractor:188 | Extracted 36 skills total.
+2026-03-11 14:37:11 | INFO     | regression_model:61 | RegressionScoringModel trained on 17-sample synthetic dataset.
+2026-03-11 14:37:11 | DEBUG    | regression_model:94 | Score: 0.976 | match=1.00, missing=0.00, n_skills=35, kw=0.094, exp=0.37
+2026-03-11 14:37:11 | INFO     | probability_estimator:71 | Probability estimate: score=0.976, match=1.0, exp=0.37, competition=0.85 → 88.9%
+2026-03-11 14:37:11 | INFO     | personality_analyzer:134 | PersonalityAnalyzer: {'Technical Depth': 10.0, 'Problem Solving': 0.0, 'Team Collaboration': 0.0, 'Communication': 0.0, 'Leadership': 3.9, 'System Design': 0.0, 'Learning Ability': 8.0, 'Project Ownership': 10.0}
+2026-03-11 14:37:11 | INFO     | radar_chart_generator:78 | Radar chart saved: outputs\skill_radar_chart.png
+2026-03-11 14:37:12 | INFO     | spider_chart_generator:65 | Spider chart saved to outputs\personality_spider_chart.png
+2026-03-11 14:37:12 | INFO     | resume_improvement_advisor:191 | Generated 0 resume improvement suggestions.
+2026-03-11 14:37:12 | INFO     | interview_question_generator:279 | Interview difficulty: senior (combined=0.73)
+2026-03-11 14:37:12 | INFO     | interview_question_generator:339 | Generated 13 interview questions (difficulty=senior).
+2026-03-11 14:37:12 | INFO     | report_generator:236 | Report saved: outputs\analysis_report.txt
+2026-03-11 14:40:50 | INFO     | resume_parser:85 | pdfminer OK: 3798 chars.
+2026-03-11 14:40:50 | INFO     | resume_parser:149 | Resume word count: 521
+2026-03-11 14:40:50 | INFO     | groq_ai_client:95 | Groq AI ready. Primary model: llama-3.3-70b-versatile
+2026-03-11 14:40:50 | INFO     | skill_extractor:129 | SkillExtractor ready: 387 vocab + 50 patterns.
+2026-03-11 14:40:50 | INFO     | skill_normalizer:21 | SkillNormalizer: 143 aliases loaded.
+2026-03-11 14:41:04 | WARNING  | groq_ai_client:127 | Groq API error with llama-3.3-70b-versatile: Connection error.
+2026-03-11 14:41:04 | INFO     | skill_extractor:188 | Extracted 36 skills total.
+2026-03-11 14:41:04 | WARNING  | internet_job_scraper:190 | DDG request failed for 'Sahana AI Er tech stack requirements': HTTPSConnectionPool(host='html.duckduckgo.com', port=443): Max retries exceeded with url: /html/?q=Sahana+AI+Er+tech+stack+requirements (Caused by NameResolutionError("HTTPSConnection(host='html.duckduckgo.com', port=443): Failed to resolve 'html.duckduckgo.com' ([Errno 11001] getaddrinfo failed)"))
+2026-03-11 14:41:04 | WARNING  | internet_job_scraper:190 | DDG request failed for 'skills required for AI Er job': HTTPSConnectionPool(host='html.duckduckgo.com', port=443): Max retries exceeded with url: /html/?q=skills+required+for+AI+Er+job (Caused by NameResolutionError("HTTPSConnection(host='html.duckduckgo.com', port=443): Failed to resolve 'html.duckduckgo.com' ([Errno 11001] getaddrinfo failed)"))
+2026-03-11 14:41:05 | WARNING  | internet_job_scraper:190 | DDG request failed for 'top technical skills AI Er 2024': HTTPSConnectionPool(host='html.duckduckgo.com', port=443): Max retries exceeded with url: /html/?q=top+technical+skills+AI+Er+2024 (Caused by NameResolutionError("HTTPSConnection(host='html.duckduckgo.com', port=443): Failed to resolve 'html.duckduckgo.com' ([Errno 11001] getaddrinfo failed)"))
+2026-03-11 14:41:05 | WARNING  | internet_job_scraper:190 | DDG request failed for 'AI Er job description requirements': HTTPSConnectionPool(host='html.duckduckgo.com', port=443): Max retries exceeded with url: /html/?q=AI+Er+job+description+requirements (Caused by NameResolutionError("HTTPSConnection(host='html.duckduckgo.com', port=443): Failed to resolve 'html.duckduckgo.com' ([Errno 11001] getaddrinfo failed)"))
+2026-03-11 14:41:07 | WARNING  | groq_ai_client:127 | Groq API error with llama-3.3-70b-versatile: Connection error.
+2026-03-11 14:41:07 | WARNING  | internet_job_scraper:91 | Both internet and Groq failed for role 'AI Er'.
+2026-03-11 14:41:07 | INFO     | skill_gap_analyzer:39 | Gap: matching=35, missing=0, extra=0, coverage=100.0%
+2026-03-11 14:41:07 | INFO     | skill_priority_ranker:87 | Ranked 0 missing skills by priority.
+2026-03-11 14:41:08 | WARNING  | groq_ai_client:127 | Groq API error with llama-3.3-70b-versatile: Connection error.
+2026-03-11 14:41:08 | INFO     | skill_extractor:188 | Extracted 36 skills total.
+2026-03-11 14:41:08 | INFO     | regression_model:61 | RegressionScoringModel trained on 17-sample synthetic dataset.
+2026-03-11 14:41:08 | DEBUG    | regression_model:94 | Score: 0.976 | match=1.00, missing=0.00, n_skills=35, kw=0.094, exp=0.37
+2026-03-11 14:41:08 | INFO     | probability_estimator:71 | Probability estimate: score=0.976, match=1.0, exp=0.37, competition=0.7 → 91.0%
+2026-03-11 14:41:08 | INFO     | personality_analyzer:134 | PersonalityAnalyzer: {'Technical Depth': 10.0, 'Problem Solving': 0.0, 'Team Collaboration': 0.0, 'Communication': 0.0, 'Leadership': 3.9, 'System Design': 0.0, 'Learning Ability': 8.0, 'Project Ownership': 10.0}
+2026-03-11 14:41:09 | INFO     | radar_chart_generator:78 | Radar chart saved: outputs\skill_radar_chart.png
+2026-03-11 14:41:09 | INFO     | spider_chart_generator:65 | Spider chart saved to outputs\personality_spider_chart.png
+2026-03-11 14:41:09 | INFO     | resume_improvement_advisor:191 | Generated 0 resume improvement suggestions.
+2026-03-11 14:41:09 | INFO     | interview_question_generator:279 | Interview difficulty: senior (combined=0.73)
+2026-03-11 14:41:09 | INFO     | interview_question_generator:339 | Generated 13 interview questions (difficulty=senior).
+2026-03-11 14:41:09 | INFO     | report_generator:236 | Report saved: outputs\analysis_report.txt
+2026-03-11 14:42:31 | INFO     | resume_parser:85 | pdfminer OK: 2337 chars.
+2026-03-11 14:42:31 | INFO     | resume_parser:149 | Resume word count: 308
+2026-03-11 14:42:32 | INFO     | groq_ai_client:95 | Groq AI ready. Primary model: llama-3.3-70b-versatile
+2026-03-11 14:42:32 | INFO     | skill_extractor:129 | SkillExtractor ready: 387 vocab + 50 patterns.
+2026-03-11 14:42:32 | INFO     | skill_normalizer:21 | SkillNormalizer: 143 aliases loaded.
+2026-03-11 14:42:33 | WARNING  | groq_ai_client:127 | Groq API error with llama-3.3-70b-versatile: Connection error.
+2026-03-11 14:42:33 | INFO     | skill_extractor:188 | Extracted 9 skills total.
+2026-03-11 14:42:33 | WARNING  | internet_job_scraper:190 | DDG request failed for 'google AI Er tech stack requirements': HTTPSConnectionPool(host='html.duckduckgo.com', port=443): Max retries exceeded with url: /html/?q=google+AI+Er+tech+stack+requirements (Caused by NameResolutionError("HTTPSConnection(host='html.duckduckgo.com', port=443): Failed to resolve 'html.duckduckgo.com' ([Errno 11001] getaddrinfo failed)"))
+2026-03-11 14:42:33 | WARNING  | internet_job_scraper:190 | DDG request failed for 'skills required for AI Er job': HTTPSConnectionPool(host='html.duckduckgo.com', port=443): Max retries exceeded with url: /html/?q=skills+required+for+AI+Er+job (Caused by NameResolutionError("HTTPSConnection(host='html.duckduckgo.com', port=443): Failed to resolve 'html.duckduckgo.com' ([Errno 11001] getaddrinfo failed)"))
+2026-03-11 14:42:33 | WARNING  | internet_job_scraper:190 | DDG request failed for 'top technical skills AI Er 2024': HTTPSConnectionPool(host='html.duckduckgo.com', port=443): Max retries exceeded with url: /html/?q=top+technical+skills+AI+Er+2024 (Caused by NameResolutionError("HTTPSConnection(host='html.duckduckgo.com', port=443): Failed to resolve 'html.duckduckgo.com' ([Errno 11001] getaddrinfo failed)"))
+2026-03-11 14:42:34 | WARNING  | internet_job_scraper:190 | DDG request failed for 'AI Er job description requirements': HTTPSConnectionPool(host='html.duckduckgo.com', port=443): Max retries exceeded with url: /html/?q=AI+Er+job+description+requirements (Caused by NameResolutionError("HTTPSConnection(host='html.duckduckgo.com', port=443): Failed to resolve 'html.duckduckgo.com' ([Errno 11001] getaddrinfo failed)"))
+2026-03-11 14:42:36 | WARNING  | groq_ai_client:127 | Groq API error with llama-3.3-70b-versatile: Connection error.
+2026-03-11 14:42:36 | WARNING  | internet_job_scraper:91 | Both internet and Groq failed for role 'AI Er'.
+2026-03-11 14:42:36 | INFO     | skill_gap_analyzer:39 | Gap: matching=9, missing=0, extra=0, coverage=100.0%
+2026-03-11 14:42:36 | INFO     | skill_priority_ranker:87 | Ranked 0 missing skills by priority.
+2026-03-11 14:42:37 | WARNING  | groq_ai_client:127 | Groq API error with llama-3.3-70b-versatile: Connection error.
+2026-03-11 14:42:37 | INFO     | skill_extractor:188 | Extracted 9 skills total.
+2026-03-11 14:42:37 | INFO     | regression_model:61 | RegressionScoringModel trained on 17-sample synthetic dataset.
+2026-03-11 14:42:37 | DEBUG    | regression_model:94 | Score: 1.0 | match=1.00, missing=0.00, n_skills=9, kw=0.036, exp=0.41
+2026-03-11 14:42:37 | INFO     | probability_estimator:71 | Probability estimate: score=1.0, match=1.0, exp=0.41, competition=0.7 → 92.0%
+2026-03-11 14:42:37 | INFO     | personality_analyzer:134 | PersonalityAnalyzer: {'Technical Depth': 10.0, 'Problem Solving': 5.4, 'Team Collaboration': 7.4, 'Communication': 0.0, 'Leadership': 3.9, 'System Design': 10.0, 'Learning Ability': 0.0, 'Project Ownership': 10.0}
+2026-03-11 14:42:38 | INFO     | radar_chart_generator:78 | Radar chart saved: outputs\skill_radar_chart.png
+2026-03-11 14:42:38 | INFO     | spider_chart_generator:65 | Spider chart saved to outputs\personality_spider_chart.png
+2026-03-11 14:42:38 | INFO     | resume_improvement_advisor:191 | Generated 0 resume improvement suggestions.
+2026-03-11 14:42:38 | INFO     | interview_question_generator:279 | Interview difficulty: senior (combined=0.76)
+2026-03-11 14:42:38 | INFO     | interview_question_generator:339 | Generated 7 interview questions (difficulty=senior).
+2026-03-11 14:42:38 | INFO     | report_generator:236 | Report saved: outputs\analysis_report.txt
+2026-03-11 14:43:01 | INFO     | resume_parser:85 | pdfminer OK: 891 chars.
+2026-03-11 14:43:01 | INFO     | resume_parser:149 | Resume word count: 98
+2026-03-11 14:43:01 | INFO     | groq_ai_client:95 | Groq AI ready. Primary model: llama-3.3-70b-versatile
+2026-03-11 14:43:01 | INFO     | skill_extractor:129 | SkillExtractor ready: 387 vocab + 50 patterns.
+2026-03-11 14:43:01 | INFO     | skill_normalizer:21 | SkillNormalizer: 143 aliases loaded.
+2026-03-11 14:43:15 | WARNING  | groq_ai_client:127 | Groq API error with llama-3.3-70b-versatile: Connection error.
+2026-03-11 14:43:15 | INFO     | skill_extractor:188 | Extracted 9 skills total.
+2026-03-11 14:43:15 | WARNING  | internet_job_scraper:190 | DDG request failed for 'skills required for AI Er job': HTTPSConnectionPool(host='html.duckduckgo.com', port=443): Max retries exceeded with url: /html/?q=skills+required+for+AI+Er+job (Caused by NameResolutionError("HTTPSConnection(host='html.duckduckgo.com', port=443): Failed to resolve 'html.duckduckgo.com' ([Errno 11001] getaddrinfo failed)"))
+2026-03-11 14:43:15 | WARNING  | internet_job_scraper:190 | DDG request failed for 'top technical skills AI Er 2024': HTTPSConnectionPool(host='html.duckduckgo.com', port=443): Max retries exceeded with url: /html/?q=top+technical+skills+AI+Er+2024 (Caused by NameResolutionError("HTTPSConnection(host='html.duckduckgo.com', port=443): Failed to resolve 'html.duckduckgo.com' ([Errno 11001] getaddrinfo failed)"))
+2026-03-11 14:43:15 | WARNING  | internet_job_scraper:190 | DDG request failed for 'AI Er job description requirements': HTTPSConnectionPool(host='html.duckduckgo.com', port=443): Max retries exceeded with url: /html/?q=AI+Er+job+description+requirements (Caused by NameResolutionError("HTTPSConnection(host='html.duckduckgo.com', port=443): Failed to resolve 'html.duckduckgo.com' ([Errno 11001] getaddrinfo failed)"))
+2026-03-11 14:43:16 | WARNING  | internet_job_scraper:190 | DDG request failed for 'how to become AI Er skills needed': HTTPSConnectionPool(host='html.duckduckgo.com', port=443): Max retries exceeded with url: /html/?q=how+to+become+AI+Er+skills+needed (Caused by NameResolutionError("HTTPSConnection(host='html.duckduckgo.com', port=443): Failed to resolve 'html.duckduckgo.com' ([Errno 11001] getaddrinfo failed)"))
+2026-03-11 14:43:17 | WARNING  | groq_ai_client:127 | Groq API error with llama-3.3-70b-versatile: Connection error.
+2026-03-11 14:43:17 | WARNING  | internet_job_scraper:91 | Both internet and Groq failed for role 'AI Er'.
+2026-03-11 14:43:17 | INFO     | skill_gap_analyzer:39 | Gap: matching=9, missing=0, extra=0, coverage=100.0%
+2026-03-11 14:43:17 | INFO     | skill_priority_ranker:87 | Ranked 0 missing skills by priority.
+2026-03-11 14:43:19 | WARNING  | groq_ai_client:127 | Groq API error with llama-3.3-70b-versatile: Connection error.
+2026-03-11 14:43:19 | INFO     | skill_extractor:188 | Extracted 9 skills total.
+2026-03-11 14:43:19 | INFO     | regression_model:61 | RegressionScoringModel trained on 17-sample synthetic dataset.
+2026-03-11 14:43:19 | DEBUG    | regression_model:94 | Score: 0.96 | match=1.00, missing=0.00, n_skills=9, kw=0.092, exp=0.04
+2026-03-11 14:43:19 | INFO     | probability_estimator:71 | Probability estimate: score=0.96, match=1.0, exp=0.04, competition=0.7 → 86.5%
+2026-03-11 14:43:19 | INFO     | personality_analyzer:134 | PersonalityAnalyzer: {'Technical Depth': 10.0, 'Problem Solving': 0.0, 'Team Collaboration': 0.0, 'Communication': 4.6, 'Leadership': 0.0, 'System Design': 10.0, 'Learning Ability': 0.0, 'Project Ownership': 8.9}
+2026-03-11 14:43:19 | INFO     | radar_chart_generator:78 | Radar chart saved: outputs\skill_radar_chart.png
+2026-03-11 14:43:20 | INFO     | spider_chart_generator:65 | Spider chart saved to outputs\personality_spider_chart.png
+2026-03-11 14:43:20 | INFO     | resume_improvement_advisor:191 | Generated 0 resume improvement suggestions.
+2026-03-11 14:43:20 | INFO     | interview_question_generator:279 | Interview difficulty: mid (combined=0.59)
+2026-03-11 14:43:20 | INFO     | interview_question_generator:339 | Generated 6 interview questions (difficulty=mid).
+2026-03-11 14:43:20 | INFO     | report_generator:236 | Report saved: outputs\analysis_report.txt
+2026-03-11 14:51:09 | INFO     | resume_parser:85 | pdfminer OK: 3798 chars.
+2026-03-11 14:51:09 | INFO     | resume_parser:149 | Resume word count: 521
+2026-03-11 14:51:09 | INFO     | groq_ai_client:95 | Groq AI ready. Primary model: llama-3.3-70b-versatile
+2026-03-11 14:51:09 | INFO     | skill_extractor:129 | SkillExtractor ready: 387 vocab + 50 patterns.
+2026-03-11 14:51:09 | INFO     | skill_normalizer:21 | SkillNormalizer: 143 aliases loaded.
+2026-03-11 14:51:11 | INFO     | groq_ai_client:160 | Groq resume extraction: 32 skills → ['python', 'c++', 'java', 'scikit-learn', 'tensorflow', 'keras', 'pytorch', 'pandas']
+2026-03-11 14:51:11 | INFO     | skill_extractor:188 | Extracted 43 skills total.
+2026-03-11 14:51:11 | INFO     | cache_manager:38 | Cache HIT for 'ai engineer' (20 skills cached).
+2026-03-11 14:51:11 | INFO     | groq_ai_client:160 | Groq resume extraction: 32 skills → ['python', 'c++', 'java', 'scikit-learn', 'tensorflow', 'keras', 'pytorch', 'pandas']
+2026-03-11 14:51:11 | INFO     | skill_extractor:188 | Extracted 43 skills total.
+2026-03-11 14:51:11 | INFO     | skill_gap_analyzer:39 | Gap: matching=13, missing=7, extra=27, coverage=65.0%
+2026-03-11 14:51:11 | INFO     | skill_priority_ranker:87 | Ranked 7 missing skills by priority.
+2026-03-11 14:51:12 | INFO     | groq_ai_client:160 | Groq resume extraction: 32 skills → ['python', 'c++', 'java', 'scikit-learn', 'tensorflow', 'keras', 'pytorch', 'pandas']
+2026-03-11 14:51:12 | INFO     | skill_extractor:188 | Extracted 43 skills total.
+2026-03-11 14:51:12 | INFO     | regression_model:61 | RegressionScoringModel trained on 17-sample synthetic dataset.
+2026-03-11 14:51:12 | DEBUG    | regression_model:94 | Score: 0.639 | match=0.65, missing=0.35, n_skills=40, kw=0.113, exp=0.37
+2026-03-11 14:51:12 | INFO     | probability_estimator:71 | Probability estimate: score=0.639, match=0.65, exp=0.37, competition=0.85 → 55.1%
+2026-03-11 14:51:13 | INFO     | personality_analyzer:134 | PersonalityAnalyzer: {'Technical Depth': 10.0, 'Problem Solving': 0.0, 'Team Collaboration': 0.0, 'Communication': 0.0, 'Leadership': 3.9, 'System Design': 0.0, 'Learning Ability': 8.0, 'Project Ownership': 10.0}
+2026-03-11 14:51:13 | INFO     | radar_chart_generator:78 | Radar chart saved: outputs\skill_radar_chart.png
+2026-03-11 14:51:14 | INFO     | spider_chart_generator:65 | Spider chart saved to outputs\personality_spider_chart.png
+2026-03-11 14:51:14 | INFO     | resume_improvement_advisor:191 | Generated 6 resume improvement suggestions.
+2026-03-11 14:51:14 | INFO     | interview_question_generator:279 | Interview difficulty: mid (combined=0.53)
+2026-03-11 14:51:14 | INFO     | interview_question_generator:339 | Generated 14 interview questions (difficulty=mid).
+2026-03-11 14:51:14 | INFO     | report_generator:236 | Report saved: outputs\analysis_report.txt
+2026-03-11 15:02:10 | INFO     | resume_parser:85 | pdfminer OK: 3798 chars.
+2026-03-11 15:02:10 | INFO     | resume_parser:149 | Resume word count: 521
+2026-03-11 15:02:11 | INFO     | groq_ai_client:95 | Groq AI ready. Primary model: llama-3.3-70b-versatile
+2026-03-11 15:02:11 | INFO     | skill_extractor:129 | SkillExtractor ready: 387 vocab + 50 patterns.
+2026-03-11 15:02:11 | INFO     | skill_normalizer:21 | SkillNormalizer: 143 aliases loaded.
+2026-03-11 15:02:13 | WARNING  | groq_ai_client:127 | Groq API error with llama-3.3-70b-versatile: Connection error.
+2026-03-11 15:02:13 | INFO     | skill_extractor:188 | Extracted 36 skills total.
+2026-03-11 15:02:13 | WARNING  | internet_job_scraper:190 | DDG request failed for 'Sahana pvt LTD Ai engineer tech stack requirements': HTTPSConnectionPool(host='html.duckduckgo.com', port=443): Max retries exceeded with url: /html/?q=Sahana+pvt+LTD+Ai+engineer+tech+stack+requirements (Caused by NameResolutionError("HTTPSConnection(host='html.duckduckgo.com', port=443): Failed to resolve 'html.duckduckgo.com' ([Errno 11001] getaddrinfo failed)"))
+2026-03-11 15:02:13 | WARNING  | internet_job_scraper:190 | DDG request failed for 'skills required for Ai engineer job': HTTPSConnectionPool(host='html.duckduckgo.com', port=443): Max retries exceeded with url: /html/?q=skills+required+for+Ai+engineer+job (Caused by NameResolutionError("HTTPSConnection(host='html.duckduckgo.com', port=443): Failed to resolve 'html.duckduckgo.com' ([Errno 11001] getaddrinfo failed)"))
+2026-03-11 15:02:13 | WARNING  | internet_job_scraper:190 | DDG request failed for 'top technical skills Ai engineer 2024': HTTPSConnectionPool(host='html.duckduckgo.com', port=443): Max retries exceeded with url: /html/?q=top+technical+skills+Ai+engineer+2024 (Caused by NameResolutionError("HTTPSConnection(host='html.duckduckgo.com', port=443): Failed to resolve 'html.duckduckgo.com' ([Errno 11001] getaddrinfo failed)"))
+2026-03-11 15:02:13 | WARNING  | internet_job_scraper:190 | DDG request failed for 'Ai engineer job description requirements': HTTPSConnectionPool(host='html.duckduckgo.com', port=443): Max retries exceeded with url: /html/?q=Ai+engineer+job+description+requirements (Caused by NameResolutionError("HTTPSConnection(host='html.duckduckgo.com', port=443): Failed to resolve 'html.duckduckgo.com' ([Errno 11001] getaddrinfo failed)"))
+2026-03-11 15:02:15 | WARNING  | groq_ai_client:127 | Groq API error with llama-3.3-70b-versatile: Connection error.
+2026-03-11 15:02:15 | WARNING  | internet_job_scraper:91 | Both internet and Groq failed for role 'Ai engineer'.
+2026-03-11 15:03:38 | INFO     | resume_parser:85 | pdfminer OK: 3798 chars.
+2026-03-11 15:03:38 | INFO     | resume_parser:149 | Resume word count: 521
+2026-03-11 15:03:38 | INFO     | groq_ai_client:95 | Groq AI ready. Primary model: llama-3.3-70b-versatile
+2026-03-11 15:03:38 | INFO     | skill_extractor:129 | SkillExtractor ready: 387 vocab + 50 patterns.
+2026-03-11 15:03:38 | INFO     | skill_normalizer:21 | SkillNormalizer: 143 aliases loaded.
+2026-03-11 15:03:40 | INFO     | groq_ai_client:160 | Groq resume extraction: 32 skills → ['python', 'c++', 'java', 'scikit-learn', 'tensorflow', 'keras', 'pytorch', 'pandas']
+2026-03-11 15:03:40 | INFO     | skill_extractor:188 | Extracted 43 skills total.
+2026-03-11 15:03:41 | DEBUG    | internet_job_scraper:164 | DDG HTTP 202 for 'Sahana pvt LTD Ai engineer tech stack requirements'
+2026-03-11 15:03:42 | DEBUG    | internet_job_scraper:164 | DDG HTTP 202 for 'skills required for Ai engineer job'
+2026-03-11 15:03:44 | DEBUG    | internet_job_scraper:164 | DDG HTTP 202 for 'top technical skills Ai engineer 2024'
+2026-03-11 15:03:45 | DEBUG    | internet_job_scraper:164 | DDG HTTP 202 for 'Ai engineer job description requirements'
+2026-03-11 15:03:46 | INFO     | groq_ai_client:188 | Groq role skills for 'Ai engineer': ['python', 'tensorflow', 'pytorch', 'machine learning', 'deep learning', 'natural language processing', 'computer vision', 'docker']
+2026-03-11 15:03:46 | INFO     | internet_job_scraper:87 | Groq provided 20 role skills for 'Ai engineer'.
+2026-03-11 15:03:46 | INFO     | cache_manager:49 | Cache SET for 'ai engineer__sahana pvt ltd' with 20 skills.
+2026-03-11 15:03:47 | INFO     | groq_ai_client:160 | Groq resume extraction: 32 skills → ['python', 'c++', 'java', 'scikit-learn', 'tensorflow', 'keras', 'pytorch', 'pandas']
+2026-03-11 15:03:47 | INFO     | skill_extractor:188 | Extracted 43 skills total.
+2026-03-11 15:03:47 | INFO     | skill_gap_analyzer:39 | Gap: matching=12, missing=8, extra=28, coverage=60.0%
+2026-03-11 15:03:47 | INFO     | skill_priority_ranker:87 | Ranked 8 missing skills by priority.
+2026-03-11 15:03:47 | INFO     | groq_ai_client:160 | Groq resume extraction: 32 skills → ['python', 'c++', 'java', 'scikit-learn', 'tensorflow', 'keras', 'pytorch', 'pandas']
+2026-03-11 15:03:47 | INFO     | skill_extractor:188 | Extracted 43 skills total.
+2026-03-11 15:03:47 | INFO     | regression_model:61 | RegressionScoringModel trained on 17-sample synthetic dataset.
+2026-03-11 15:03:47 | DEBUG    | regression_model:94 | Score: 0.592 | match=0.60, missing=0.40, n_skills=40, kw=0.113, exp=0.37
+2026-03-11 15:03:47 | INFO     | probability_estimator:71 | Probability estimate: score=0.592, match=0.6, exp=0.37, competition=0.85 → 48.5%
+2026-03-11 15:03:47 | INFO     | personality_analyzer:134 | PersonalityAnalyzer: {'Technical Depth': 10.0, 'Problem Solving': 0.0, 'Team Collaboration': 0.0, 'Communication': 0.0, 'Leadership': 3.9, 'System Design': 0.0, 'Learning Ability': 8.0, 'Project Ownership': 10.0}
+2026-03-11 15:03:48 | INFO     | radar_chart_generator:78 | Radar chart saved: outputs\skill_radar_chart.png
+2026-03-11 15:03:48 | INFO     | spider_chart_generator:65 | Spider chart saved to outputs\personality_spider_chart.png
+2026-03-11 15:03:48 | INFO     | resume_improvement_advisor:191 | Generated 6 resume improvement suggestions.
+2026-03-11 15:03:48 | INFO     | interview_question_generator:279 | Interview difficulty: mid (combined=0.50)
+2026-03-11 15:03:48 | INFO     | interview_question_generator:339 | Generated 14 interview questions (difficulty=mid).
+2026-03-11 15:05:31 | INFO     | resume_parser:85 | pdfminer OK: 2337 chars.
+2026-03-11 15:05:31 | INFO     | resume_parser:149 | Resume word count: 308
+2026-03-11 15:05:32 | INFO     | groq_ai_client:95 | Groq AI ready. Primary model: llama-3.3-70b-versatile
+2026-03-11 15:05:32 | INFO     | skill_extractor:129 | SkillExtractor ready: 387 vocab + 50 patterns.
+2026-03-11 15:05:32 | INFO     | skill_normalizer:21 | SkillNormalizer: 143 aliases loaded.
+2026-03-11 15:05:54 | INFO     | groq_ai_client:160 | Groq resume extraction: 10 skills → ['python', 'java', 'html', 'php', 'excel automation', 'google sheets', 'nlp', 'chatbots']
+2026-03-11 15:05:54 | INFO     | skill_extractor:188 | Extracted 13 skills total.
+2026-03-11 15:05:54 | INFO     | cache_manager:38 | Cache HIT for 'ai engineer__sahana pvt ltd' (20 skills cached).
+2026-03-11 15:05:54 | INFO     | groq_ai_client:160 | Groq resume extraction: 10 skills → ['python', 'java', 'html', 'php', 'excel automation', 'google sheets', 'nlp', 'chatbots']
+2026-03-11 15:05:54 | INFO     | skill_extractor:188 | Extracted 13 skills total.
+2026-03-11 15:05:54 | INFO     | skill_gap_analyzer:39 | Gap: matching=3, missing=17, extra=10, coverage=15.0%
+2026-03-11 15:05:54 | INFO     | skill_priority_ranker:87 | Ranked 17 missing skills by priority.
+2026-03-11 15:05:55 | INFO     | groq_ai_client:160 | Groq resume extraction: 10 skills → ['python', 'java', 'html', 'php', 'excel automation', 'google sheets', 'nlp', 'chatbots']
+2026-03-11 15:05:55 | INFO     | skill_extractor:188 | Extracted 13 skills total.
+2026-03-11 15:05:55 | INFO     | regression_model:61 | RegressionScoringModel trained on 17-sample synthetic dataset.
+2026-03-11 15:05:55 | DEBUG    | regression_model:94 | Score: 0.213 | match=0.15, missing=0.85, n_skills=13, kw=0.055, exp=0.41
+2026-03-11 15:05:55 | INFO     | probability_estimator:71 | Probability estimate: score=0.213, match=0.15, exp=0.41, competition=0.85 → 9.6%
+2026-03-11 15:05:55 | INFO     | personality_analyzer:134 | PersonalityAnalyzer: {'Technical Depth': 10.0, 'Problem Solving': 5.4, 'Team Collaboration': 7.4, 'Communication': 0.0, 'Leadership': 3.9, 'System Design': 10.0, 'Learning Ability': 0.0, 'Project Ownership': 10.0}
+2026-03-11 15:05:56 | INFO     | radar_chart_generator:78 | Radar chart saved: outputs\skill_radar_chart.png
+2026-03-11 15:05:56 | INFO     | spider_chart_generator:65 | Spider chart saved to outputs\personality_spider_chart.png
+2026-03-11 15:05:56 | INFO     | resume_improvement_advisor:191 | Generated 6 resume improvement suggestions.
+2026-03-11 15:05:56 | INFO     | interview_question_generator:279 | Interview difficulty: junior (combined=0.29)
+2026-03-11 15:05:56 | INFO     | interview_question_generator:339 | Generated 8 interview questions (difficulty=junior).
+2026-03-11 15:06:21 | INFO     | resume_parser:85 | pdfminer OK: 2337 chars.
+2026-03-11 15:06:21 | INFO     | resume_parser:149 | Resume word count: 308
+2026-03-11 15:06:21 | INFO     | groq_ai_client:95 | Groq AI ready. Primary model: llama-3.3-70b-versatile
+2026-03-11 15:06:21 | INFO     | skill_extractor:129 | SkillExtractor ready: 387 vocab + 50 patterns.
+2026-03-11 15:06:21 | INFO     | skill_normalizer:21 | SkillNormalizer: 143 aliases loaded.
+2026-03-11 15:06:25 | INFO     | groq_ai_client:160 | Groq resume extraction: 10 skills → ['python', 'java', 'php', 'html', 'excel automation', 'google sheets', 'nlp', 'chatbots']
+2026-03-11 15:06:25 | INFO     | skill_extractor:188 | Extracted 13 skills total.
+2026-03-11 15:06:25 | INFO     | cache_manager:38 | Cache HIT for 'ai engineer__sahana pvt ltd' (20 skills cached).
+2026-03-11 15:06:26 | INFO     | groq_ai_client:160 | Groq resume extraction: 10 skills → ['python', 'java', 'html', 'php', 'excel automation', 'google sheets', 'nlp', 'chatbots']
+2026-03-11 15:06:26 | INFO     | skill_extractor:188 | Extracted 13 skills total.
+2026-03-11 15:06:26 | INFO     | skill_gap_analyzer:39 | Gap: matching=3, missing=17, extra=10, coverage=15.0%
+2026-03-11 15:06:26 | INFO     | skill_priority_ranker:87 | Ranked 17 missing skills by priority.
+2026-03-11 15:06:26 | INFO     | groq_ai_client:160 | Groq resume extraction: 10 skills → ['python', 'java', 'html', 'php', 'excel automation', 'google sheets', 'nlp', 'chatbots']
+2026-03-11 15:06:26 | INFO     | skill_extractor:188 | Extracted 13 skills total.
+2026-03-11 15:06:26 | INFO     | regression_model:61 | RegressionScoringModel trained on 17-sample synthetic dataset.
+2026-03-11 15:06:26 | DEBUG    | regression_model:94 | Score: 0.213 | match=0.15, missing=0.85, n_skills=13, kw=0.055, exp=0.41
+2026-03-11 15:06:26 | INFO     | probability_estimator:71 | Probability estimate: score=0.213, match=0.15, exp=0.41, competition=0.85 → 9.6%
+2026-03-11 15:06:26 | INFO     | personality_analyzer:134 | PersonalityAnalyzer: {'Technical Depth': 10.0, 'Problem Solving': 5.4, 'Team Collaboration': 7.4, 'Communication': 0.0, 'Leadership': 3.9, 'System Design': 10.0, 'Learning Ability': 0.0, 'Project Ownership': 10.0}
+2026-03-11 15:06:27 | INFO     | radar_chart_generator:78 | Radar chart saved: outputs\skill_radar_chart.png
+2026-03-11 15:06:27 | INFO     | spider_chart_generator:65 | Spider chart saved to outputs\personality_spider_chart.png
+2026-03-11 15:06:27 | INFO     | resume_improvement_advisor:191 | Generated 6 resume improvement suggestions.
+2026-03-11 15:06:27 | INFO     | interview_question_generator:279 | Interview difficulty: junior (combined=0.29)
+2026-03-11 15:06:27 | INFO     | interview_question_generator:339 | Generated 8 interview questions (difficulty=junior).
+2026-03-11 15:08:13 | INFO     | resume_parser:85 | pdfminer OK: 3798 chars.
+2026-03-11 15:08:13 | INFO     | resume_parser:149 | Resume word count: 521
+2026-03-11 15:08:13 | INFO     | groq_ai_client:95 | Groq AI ready. Primary model: llama-3.3-70b-versatile
+2026-03-11 15:08:13 | INFO     | skill_extractor:129 | SkillExtractor ready: 387 vocab + 50 patterns.
+2026-03-11 15:08:13 | INFO     | skill_normalizer:21 | SkillNormalizer: 143 aliases loaded.
+2026-03-11 15:08:14 | INFO     | groq_ai_client:160 | Groq resume extraction: 32 skills → ['python', 'c++', 'java', 'scikit-learn', 'tensorflow', 'keras', 'pytorch', 'pandas']
+2026-03-11 15:08:14 | INFO     | skill_extractor:188 | Extracted 43 skills total.
+2026-03-11 15:08:15 | DEBUG    | internet_job_scraper:164 | DDG HTTP 202 for 'google Ai engineer tech stack requirements'
+2026-03-11 15:08:27 | DEBUG    | internet_job_scraper:164 | DDG HTTP 202 for 'skills required for Ai engineer job'
+2026-03-11 15:08:31 | DEBUG    | internet_job_scraper:164 | DDG HTTP 202 for 'top technical skills Ai engineer 2024'
+2026-03-11 15:08:33 | DEBUG    | internet_job_scraper:164 | DDG HTTP 202 for 'Ai engineer job description requirements'
+2026-03-11 15:08:34 | INFO     | groq_ai_client:188 | Groq role skills for 'Ai engineer': ['python', 'tensorflow', 'pytorch', 'machine learning', 'deep learning', 'natural language processing', 'computer vision', 'java']
+2026-03-11 15:08:34 | INFO     | internet_job_scraper:87 | Groq provided 24 role skills for 'Ai engineer'.
+2026-03-11 15:08:34 | INFO     | cache_manager:49 | Cache SET for 'ai engineer__google' with 24 skills.
+2026-03-11 15:08:35 | INFO     | groq_ai_client:160 | Groq resume extraction: 32 skills → ['python', 'c++', 'java', 'scikit-learn', 'tensorflow', 'keras', 'pytorch', 'pandas']
+2026-03-11 15:08:35 | INFO     | skill_extractor:188 | Extracted 43 skills total.
+2026-03-11 15:08:35 | INFO     | skill_gap_analyzer:39 | Gap: matching=13, missing=10, extra=27, coverage=56.52%
+2026-03-11 15:08:35 | INFO     | skill_priority_ranker:87 | Ranked 10 missing skills by priority.
+2026-03-11 15:08:36 | INFO     | groq_ai_client:160 | Groq resume extraction: 32 skills → ['python', 'c++', 'java', 'scikit-learn', 'tensorflow', 'keras', 'pytorch', 'pandas']
+2026-03-11 15:08:36 | INFO     | skill_extractor:188 | Extracted 43 skills total.
+2026-03-11 15:08:36 | INFO     | regression_model:61 | RegressionScoringModel trained on 17-sample synthetic dataset.
+2026-03-11 15:08:36 | DEBUG    | regression_model:94 | Score: 0.56 | match=0.57, missing=0.43, n_skills=40, kw=0.113, exp=0.37
+2026-03-11 15:08:36 | INFO     | probability_estimator:71 | Probability estimate: score=0.56, match=0.5652, exp=0.37, competition=0.85 → 44.0%
+2026-03-11 15:08:36 | INFO     | personality_analyzer:134 | PersonalityAnalyzer: {'Technical Depth': 10.0, 'Problem Solving': 0.0, 'Team Collaboration': 0.0, 'Communication': 0.0, 'Leadership': 3.9, 'System Design': 0.0, 'Learning Ability': 8.0, 'Project Ownership': 10.0}
+2026-03-11 15:08:37 | INFO     | radar_chart_generator:78 | Radar chart saved: outputs\skill_radar_chart.png
+2026-03-11 15:08:37 | INFO     | spider_chart_generator:65 | Spider chart saved to outputs\personality_spider_chart.png
+2026-03-11 15:08:37 | INFO     | resume_improvement_advisor:191 | Generated 6 resume improvement suggestions.
+2026-03-11 15:08:37 | INFO     | interview_question_generator:279 | Interview difficulty: mid (combined=0.48)
+2026-03-11 15:08:37 | INFO     | interview_question_generator:339 | Generated 12 interview questions (difficulty=mid).
+2026-03-11 15:08:59 | INFO     | resume_parser:85 | pdfminer OK: 3798 chars.
+2026-03-11 15:08:59 | INFO     | resume_parser:149 | Resume word count: 521
+2026-03-11 15:08:59 | INFO     | groq_ai_client:95 | Groq AI ready. Primary model: llama-3.3-70b-versatile
+2026-03-11 15:08:59 | INFO     | skill_extractor:129 | SkillExtractor ready: 387 vocab + 50 patterns.
+2026-03-11 15:08:59 | INFO     | skill_normalizer:21 | SkillNormalizer: 143 aliases loaded.
+2026-03-11 15:09:16 | INFO     | groq_ai_client:160 | Groq resume extraction: 32 skills → ['python', 'c++', 'java', 'scikit-learn', 'tensorflow', 'keras', 'pytorch', 'pandas']
+2026-03-11 15:09:16 | INFO     | skill_extractor:188 | Extracted 43 skills total.
+2026-03-11 15:09:16 | INFO     | cache_manager:38 | Cache HIT for 'ai engineer__google' (24 skills cached).
+2026-03-11 15:09:17 | INFO     | groq_ai_client:160 | Groq resume extraction: 32 skills → ['python', 'c++', 'java', 'scikit-learn', 'tensorflow', 'keras', 'pytorch', 'pandas']
+2026-03-11 15:09:17 | INFO     | skill_extractor:188 | Extracted 43 skills total.
+2026-03-11 15:09:17 | INFO     | skill_gap_analyzer:39 | Gap: matching=13, missing=10, extra=27, coverage=56.52%
+2026-03-11 15:09:17 | INFO     | skill_priority_ranker:87 | Ranked 10 missing skills by priority.
+2026-03-11 15:09:18 | INFO     | groq_ai_client:160 | Groq resume extraction: 32 skills → ['python', 'c++', 'java', 'scikit-learn', 'tensorflow', 'keras', 'pytorch', 'pandas']
+2026-03-11 15:09:18 | INFO     | skill_extractor:188 | Extracted 43 skills total.
+2026-03-11 15:09:18 | INFO     | regression_model:61 | RegressionScoringModel trained on 17-sample synthetic dataset.
+2026-03-11 15:09:18 | DEBUG    | regression_model:94 | Score: 0.56 | match=0.57, missing=0.43, n_skills=40, kw=0.113, exp=0.37
+2026-03-11 15:09:18 | INFO     | probability_estimator:71 | Probability estimate: score=0.56, match=0.5652, exp=0.37, competition=0.85 → 44.0%
+2026-03-11 15:09:18 | INFO     | personality_analyzer:134 | PersonalityAnalyzer: {'Technical Depth': 10.0, 'Problem Solving': 0.0, 'Team Collaboration': 0.0, 'Communication': 0.0, 'Leadership': 3.9, 'System Design': 0.0, 'Learning Ability': 8.0, 'Project Ownership': 10.0}
+2026-03-11 15:09:19 | INFO     | radar_chart_generator:78 | Radar chart saved: outputs\skill_radar_chart.png
+2026-03-11 15:09:19 | INFO     | spider_chart_generator:65 | Spider chart saved to outputs\personality_spider_chart.png
+2026-03-11 15:09:19 | INFO     | resume_improvement_advisor:191 | Generated 6 resume improvement suggestions.
+2026-03-11 15:09:19 | INFO     | interview_question_generator:279 | Interview difficulty: mid (combined=0.48)
+2026-03-11 15:09:19 | INFO     | interview_question_generator:339 | Generated 12 interview questions (difficulty=mid).
+2026-03-11 15:10:07 | INFO     | resume_parser:85 | pdfminer OK: 3798 chars.
+2026-03-11 15:10:07 | INFO     | resume_parser:149 | Resume word count: 521
+2026-03-11 15:10:08 | INFO     | groq_ai_client:95 | Groq AI ready. Primary model: llama-3.3-70b-versatile
+2026-03-11 15:10:08 | INFO     | skill_extractor:129 | SkillExtractor ready: 387 vocab + 50 patterns.
+2026-03-11 15:10:08 | INFO     | skill_normalizer:21 | SkillNormalizer: 143 aliases loaded.
+2026-03-11 15:10:09 | INFO     | groq_ai_client:160 | Groq resume extraction: 32 skills → ['python', 'c++', 'java', 'scikit-learn', 'tensorflow', 'keras', 'pytorch', 'pandas']
+2026-03-11 15:10:09 | INFO     | skill_extractor:188 | Extracted 43 skills total.
+2026-03-11 15:10:10 | DEBUG    | internet_job_scraper:164 | DDG HTTP 202 for 'skills required for Ai er job'
+2026-03-11 15:10:11 | DEBUG    | internet_job_scraper:164 | DDG HTTP 202 for 'top technical skills Ai er 2024'
+2026-03-11 15:10:12 | DEBUG    | internet_job_scraper:164 | DDG HTTP 202 for 'Ai er job description requirements'
+2026-03-11 15:10:14 | DEBUG    | internet_job_scraper:164 | DDG HTTP 202 for 'how to become Ai er skills needed'
+2026-03-11 15:10:14 | INFO     | groq_ai_client:188 | Groq role skills for 'Ai er': ['python', 'tensorflow', 'pytorch', 'keras', 'scikit-learn', 'numpy', 'pandas', 'docker']
+2026-03-11 15:10:14 | INFO     | internet_job_scraper:87 | Groq provided 20 role skills for 'Ai er'.
+2026-03-11 15:10:14 | INFO     | cache_manager:49 | Cache SET for 'ai er' with 20 skills.
+2026-03-11 15:10:15 | INFO     | groq_ai_client:160 | Groq resume extraction: 30 skills → ['python', 'c++', 'java', 'scikit-learn', 'tensorflow', 'keras', 'pytorch', 'pandas']
+2026-03-11 15:10:15 | INFO     | skill_extractor:188 | Extracted 43 skills total.
+2026-03-11 15:10:15 | INFO     | skill_gap_analyzer:39 | Gap: matching=10, missing=10, extra=30, coverage=50.0%
+2026-03-11 15:10:15 | INFO     | skill_priority_ranker:87 | Ranked 10 missing skills by priority.
+2026-03-11 15:10:16 | INFO     | groq_ai_client:160 | Groq resume extraction: 30 skills → ['python', 'c++', 'java', 'scikit-learn', 'tensorflow', 'keras', 'pytorch', 'pandas']
+2026-03-11 15:10:16 | INFO     | skill_extractor:188 | Extracted 43 skills total.
+2026-03-11 15:10:16 | INFO     | regression_model:61 | RegressionScoringModel trained on 17-sample synthetic dataset.
+2026-03-11 15:10:16 | DEBUG    | regression_model:94 | Score: 0.498 | match=0.50, missing=0.50, n_skills=40, kw=0.113, exp=0.37
+2026-03-11 15:10:16 | INFO     | probability_estimator:71 | Probability estimate: score=0.498, match=0.5, exp=0.37, competition=0.7 → 41.0%
+2026-03-11 15:10:16 | INFO     | personality_analyzer:134 | PersonalityAnalyzer: {'Technical Depth': 10.0, 'Problem Solving': 0.0, 'Team Collaboration': 0.0, 'Communication': 0.0, 'Leadership': 3.9, 'System Design': 0.0, 'Learning Ability': 8.0, 'Project Ownership': 10.0}
+2026-03-11 15:10:17 | INFO     | radar_chart_generator:78 | Radar chart saved: outputs\skill_radar_chart.png
+2026-03-11 15:10:17 | INFO     | spider_chart_generator:65 | Spider chart saved to outputs\personality_spider_chart.png
+2026-03-11 15:10:17 | INFO     | resume_improvement_advisor:191 | Generated 6 resume improvement suggestions.
+2026-03-11 15:10:17 | INFO     | interview_question_generator:279 | Interview difficulty: mid (combined=0.45)
+2026-03-11 15:10:17 | INFO     | interview_question_generator:339 | Generated 14 interview questions (difficulty=mid).
+2026-03-11 15:11:19 | INFO     | resume_parser:85 | pdfminer OK: 3798 chars.
+2026-03-11 15:11:19 | INFO     | resume_parser:149 | Resume word count: 521
+2026-03-11 15:11:20 | INFO     | groq_ai_client:95 | Groq AI ready. Primary model: llama-3.3-70b-versatile
+2026-03-11 15:11:20 | INFO     | skill_extractor:129 | SkillExtractor ready: 387 vocab + 50 patterns.
+2026-03-11 15:11:20 | INFO     | skill_normalizer:21 | SkillNormalizer: 143 aliases loaded.
+2026-03-11 15:11:59 | INFO     | groq_ai_client:160 | Groq resume extraction: 32 skills → ['python', 'c++', 'java', 'scikit-learn', 'tensorflow', 'keras', 'pytorch', 'pandas']
+2026-03-11 15:11:59 | INFO     | skill_extractor:188 | Extracted 43 skills total.
+2026-03-11 15:12:00 | DEBUG    | internet_job_scraper:164 | DDG HTTP 202 for 'Sahana ai er tech stack requirements'
+2026-03-11 15:12:01 | DEBUG    | internet_job_scraper:164 | DDG HTTP 202 for 'skills required for ai er job'
+2026-03-11 15:12:02 | DEBUG    | internet_job_scraper:164 | DDG HTTP 202 for 'top technical skills ai er 2024'
+2026-03-11 15:12:15 | WARNING  | internet_job_scraper:190 | DDG request failed for 'ai er job description requirements': HTTPSConnectionPool(host='html.duckduckgo.com', port=443): Read timed out. (read timeout=12)
+2026-03-11 15:12:53 | INFO     | groq_ai_client:188 | Groq role skills for 'ai er': ['python', 'tensorflow', 'pytorch', 'keras', 'machine learning', 'deep learning', 'natural language processing', 'computer vision']
+2026-03-11 15:12:53 | INFO     | internet_job_scraper:87 | Groq provided 20 role skills for 'ai er'.
+2026-03-11 15:12:53 | INFO     | cache_manager:49 | Cache SET for 'ai er__sahana' with 20 skills.
+2026-03-11 15:12:54 | INFO     | groq_ai_client:160 | Groq resume extraction: 32 skills → ['python', 'c++', 'java', 'scikit-learn', 'tensorflow', 'keras', 'pytorch', 'pandas']
+2026-03-11 15:12:54 | INFO     | skill_extractor:188 | Extracted 43 skills total.
+2026-03-11 15:12:54 | INFO     | skill_gap_analyzer:39 | Gap: matching=11, missing=9, extra=29, coverage=55.0%
+2026-03-11 15:12:54 | INFO     | skill_priority_ranker:87 | Ranked 9 missing skills by priority.
+2026-03-11 15:12:55 | INFO     | groq_ai_client:160 | Groq resume extraction: 32 skills → ['python', 'c++', 'java', 'scikit-learn', 'tensorflow', 'keras', 'pytorch', 'pandas']
+2026-03-11 15:12:55 | INFO     | skill_extractor:188 | Extracted 43 skills total.
+2026-03-11 15:12:55 | INFO     | regression_model:61 | RegressionScoringModel trained on 17-sample synthetic dataset.
+2026-03-11 15:12:55 | DEBUG    | regression_model:94 | Score: 0.545 | match=0.55, missing=0.45, n_skills=40, kw=0.113, exp=0.37
+2026-03-11 15:12:55 | INFO     | probability_estimator:71 | Probability estimate: score=0.545, match=0.55, exp=0.37, competition=0.7 → 47.5%
+2026-03-11 15:12:55 | INFO     | personality_analyzer:134 | PersonalityAnalyzer: {'Technical Depth': 10.0, 'Problem Solving': 0.0, 'Team Collaboration': 0.0, 'Communication': 0.0, 'Leadership': 3.9, 'System Design': 0.0, 'Learning Ability': 8.0, 'Project Ownership': 10.0}
+2026-03-11 15:12:56 | INFO     | radar_chart_generator:78 | Radar chart saved: outputs\skill_radar_chart.png
+2026-03-11 15:12:57 | INFO     | spider_chart_generator:65 | Spider chart saved to outputs\personality_spider_chart.png
+2026-03-11 15:12:57 | INFO     | resume_improvement_advisor:191 | Generated 6 resume improvement suggestions.
+2026-03-11 15:12:57 | INFO     | interview_question_generator:279 | Interview difficulty: mid (combined=0.47)
+2026-03-11 15:12:57 | INFO     | interview_question_generator:339 | Generated 14 interview questions (difficulty=mid).
+2026-03-11 15:13:04 | INFO     | resume_parser:85 | pdfminer OK: 3798 chars.
+2026-03-11 15:13:04 | INFO     | resume_parser:149 | Resume word count: 521
+2026-03-11 15:13:05 | INFO     | groq_ai_client:95 | Groq AI ready. Primary model: llama-3.3-70b-versatile
+2026-03-11 15:13:05 | INFO     | skill_extractor:129 | SkillExtractor ready: 387 vocab + 50 patterns.
+2026-03-11 15:13:05 | INFO     | skill_normalizer:21 | SkillNormalizer: 143 aliases loaded.
+2026-03-11 15:13:06 | INFO     | groq_ai_client:160 | Groq resume extraction: 30 skills → ['python', 'c++', 'java', 'scikit-learn', 'tensorflow', 'keras', 'pytorch', 'pandas']
+2026-03-11 15:13:06 | INFO     | skill_extractor:188 | Extracted 43 skills total.
+2026-03-11 15:13:07 | DEBUG    | internet_job_scraper:164 | DDG HTTP 202 for 'SAHANA AI ENGINEER tech stack requirements'
+2026-03-11 15:13:08 | DEBUG    | internet_job_scraper:164 | DDG HTTP 202 for 'skills required for AI ENGINEER job'
+2026-03-11 15:13:09 | DEBUG    | internet_job_scraper:164 | DDG HTTP 202 for 'top technical skills AI ENGINEER 2024'
+2026-03-11 15:13:10 | DEBUG    | internet_job_scraper:164 | DDG HTTP 202 for 'AI ENGINEER job description requirements'
+2026-03-11 15:13:11 | INFO     | groq_ai_client:188 | Groq role skills for 'AI ENGINEER': ['python', 'tensorflow', 'pytorch', 'machine learning', 'deep learning', 'natural language processing', 'computer vision', 'docker']
+2026-03-11 15:13:11 | INFO     | internet_job_scraper:87 | Groq provided 20 role skills for 'AI ENGINEER'.
+2026-03-11 15:13:11 | INFO     | cache_manager:49 | Cache SET for 'ai engineer__sahana' with 20 skills.
+2026-03-11 15:13:12 | INFO     | groq_ai_client:160 | Groq resume extraction: 32 skills → ['python', 'c++', 'java', 'scikit-learn', 'tensorflow', 'keras', 'pytorch', 'pandas']
+2026-03-11 15:13:12 | INFO     | skill_extractor:188 | Extracted 43 skills total.
+2026-03-11 15:13:12 | INFO     | skill_gap_analyzer:39 | Gap: matching=16, missing=4, extra=24, coverage=80.0%
+2026-03-11 15:13:12 | INFO     | skill_priority_ranker:87 | Ranked 4 missing skills by priority.
+2026-03-11 15:13:13 | INFO     | groq_ai_client:160 | Groq resume extraction: 30 skills → ['python', 'c++', 'java', 'scikit-learn', 'tensorflow', 'keras', 'pytorch', 'pandas']
+2026-03-11 15:13:13 | INFO     | skill_extractor:188 | Extracted 43 skills total.
+2026-03-11 15:13:13 | INFO     | regression_model:61 | RegressionScoringModel trained on 17-sample synthetic dataset.
+2026-03-11 15:13:13 | DEBUG    | regression_model:94 | Score: 0.78 | match=0.80, missing=0.20, n_skills=40, kw=0.113, exp=0.37
+2026-03-11 15:13:13 | INFO     | probability_estimator:71 | Probability estimate: score=0.78, match=0.8, exp=0.37, competition=0.85 → 73.1%
+2026-03-11 15:13:13 | INFO     | personality_analyzer:134 | PersonalityAnalyzer: {'Technical Depth': 10.0, 'Problem Solving': 0.0, 'Team Collaboration': 0.0, 'Communication': 0.0, 'Leadership': 3.9, 'System Design': 0.0, 'Learning Ability': 8.0, 'Project Ownership': 10.0}
+2026-03-11 15:13:15 | INFO     | radar_chart_generator:78 | Radar chart saved: outputs\skill_radar_chart.png
+2026-03-11 15:13:15 | INFO     | spider_chart_generator:65 | Spider chart saved to outputs\personality_spider_chart.png
+2026-03-11 15:13:15 | INFO     | resume_improvement_advisor:191 | Generated 4 resume improvement suggestions.
+2026-03-11 15:13:15 | INFO     | interview_question_generator:279 | Interview difficulty: mid (combined=0.62)
+2026-03-11 15:13:15 | INFO     | interview_question_generator:339 | Generated 14 interview questions (difficulty=mid).
+2026-03-11 15:18:58 | INFO     | resume_parser:85 | pdfminer OK: 3798 chars.
+2026-03-11 15:18:58 | INFO     | resume_parser:149 | Resume word count: 521
+2026-03-11 15:18:59 | INFO     | groq_ai_client:95 | Groq AI ready. Primary model: llama-3.3-70b-versatile
+2026-03-11 15:18:59 | INFO     | skill_extractor:129 | SkillExtractor ready: 387 vocab + 50 patterns.
+2026-03-11 15:18:59 | INFO     | skill_normalizer:21 | SkillNormalizer: 143 aliases loaded.
+2026-03-11 15:19:00 | INFO     | groq_ai_client:160 | Groq resume extraction: 32 skills → ['python', 'c++', 'java', 'scikit-learn', 'tensorflow', 'keras', 'pytorch', 'pandas']
+2026-03-11 15:19:00 | INFO     | skill_extractor:188 | Extracted 43 skills total.
+2026-03-11 15:19:02 | DEBUG    | internet_job_scraper:164 | DDG HTTP 202 for 'sahana ai enginer tech stack requirements'
+2026-03-11 15:19:04 | DEBUG    | internet_job_scraper:164 | DDG HTTP 202 for 'skills required for ai enginer job'
+2026-03-11 15:19:05 | DEBUG    | internet_job_scraper:164 | DDG HTTP 202 for 'top technical skills ai enginer 2024'
+2026-03-11 15:19:07 | DEBUG    | internet_job_scraper:164 | DDG HTTP 202 for 'ai enginer job description requirements'
+2026-03-11 15:19:08 | INFO     | groq_ai_client:188 | Groq role skills for 'ai enginer': ['python', 'tensorflow', 'pytorch', 'machine learning', 'deep learning', 'natural language processing', 'computer vision', 'docker']
+2026-03-11 15:19:08 | INFO     | internet_job_scraper:87 | Groq provided 20 role skills for 'ai enginer'.
+2026-03-11 15:19:08 | INFO     | cache_manager:49 | Cache SET for 'ai enginer__sahana' with 20 skills.
+2026-03-11 15:19:09 | INFO     | groq_ai_client:160 | Groq resume extraction: 30 skills → ['python', 'c++', 'java', 'scikit-learn', 'tensorflow', 'keras', 'pytorch', 'pandas']
+2026-03-11 15:19:09 | INFO     | skill_extractor:188 | Extracted 43 skills total.
+2026-03-11 15:19:09 | INFO     | skill_gap_analyzer:39 | Gap: matching=12, missing=8, extra=28, coverage=60.0%
+2026-03-11 15:19:09 | INFO     | skill_priority_ranker:87 | Ranked 8 missing skills by priority.
+2026-03-11 15:19:10 | INFO     | groq_ai_client:160 | Groq resume extraction: 32 skills → ['python', 'c++', 'java', 'scikit-learn', 'tensorflow', 'keras', 'pytorch', 'pandas']
+2026-03-11 15:19:10 | INFO     | skill_extractor:188 | Extracted 43 skills total.
+2026-03-11 15:19:10 | INFO     | regression_model:61 | RegressionScoringModel trained on 17-sample synthetic dataset.
+2026-03-11 15:19:10 | DEBUG    | regression_model:94 | Score: 0.592 | match=0.60, missing=0.40, n_skills=40, kw=0.113, exp=0.37
+2026-03-11 15:19:10 | INFO     | probability_estimator:71 | Probability estimate: score=0.592, match=0.6, exp=0.37, competition=0.7 → 54.1%
+2026-03-11 15:19:10 | INFO     | personality_analyzer:134 | PersonalityAnalyzer: {'Technical Depth': 10.0, 'Problem Solving': 0.0, 'Team Collaboration': 0.0, 'Communication': 0.0, 'Leadership': 3.9, 'System Design': 0.0, 'Learning Ability': 8.0, 'Project Ownership': 10.0}
+2026-03-11 15:19:12 | INFO     | radar_chart_generator:78 | Radar chart saved: outputs\skill_radar_chart.png
+2026-03-11 15:19:15 | INFO     | spider_chart_generator:65 | Spider chart saved to outputs\personality_spider_chart.png
+2026-03-11 15:19:15 | INFO     | resume_improvement_advisor:191 | Generated 6 resume improvement suggestions.
+2026-03-11 15:19:15 | INFO     | interview_question_generator:279 | Interview difficulty: mid (combined=0.50)
+2026-03-11 15:19:15 | INFO     | interview_question_generator:339 | Generated 14 interview questions (difficulty=mid).
+2026-03-11 15:34:42 | INFO     | resume_parser:71 | TXT read OK (utf-8): 11760 chars.
+2026-03-11 15:34:42 | INFO     | resume_parser:149 | Resume word count: 1105
+2026-03-11 15:34:42 | INFO     | groq_ai_client:95 | Groq AI ready. Primary model: llama-3.3-70b-versatile
+2026-03-11 15:34:42 | INFO     | skill_extractor:129 | SkillExtractor ready: 387 vocab + 50 patterns.
+2026-03-11 15:34:42 | INFO     | skill_normalizer:21 | SkillNormalizer: 143 aliases loaded.
+2026-03-11 15:34:45 | INFO     | groq_ai_client:160 | Groq resume extraction: 47 skills → ['algorithms', 'anaconda', 'android', 'android studio', 'aws', 'c++', 'clustering', 'cnn']
+2026-03-11 15:34:45 | INFO     | skill_extractor:188 | Extracted 58 skills total.
+2026-03-11 15:34:45 | INFO     | cache_manager:38 | Cache HIT for 'ai engineer' (20 skills cached).
+2026-03-11 15:34:46 | INFO     | groq_ai_client:160 | Groq resume extraction: 47 skills → ['algorithms', 'anaconda', 'android', 'android studio', 'aws', 'c++', 'clustering', 'cnn']
+2026-03-11 15:34:46 | INFO     | skill_extractor:188 | Extracted 58 skills total.
+2026-03-11 15:34:46 | INFO     | skill_gap_analyzer:39 | Gap: matching=20, missing=0, extra=37, coverage=100.0%
+2026-03-11 15:34:46 | INFO     | skill_priority_ranker:87 | Ranked 0 missing skills by priority.
+2026-03-11 15:34:46 | INFO     | groq_ai_client:160 | Groq resume extraction: 47 skills → ['algorithms', 'anaconda', 'android', 'android studio', 'aws', 'c++', 'clustering', 'cnn']
+2026-03-11 15:34:46 | INFO     | skill_extractor:188 | Extracted 58 skills total.
+2026-03-11 15:34:46 | INFO     | regression_model:61 | RegressionScoringModel trained on 17-sample synthetic dataset.
+2026-03-11 15:34:46 | DEBUG    | regression_model:94 | Score: 0.968 | match=1.00, missing=0.00, n_skills=57, kw=0.067, exp=0.42
+2026-03-11 15:34:46 | INFO     | probability_estimator:71 | Probability estimate: score=0.968, match=1.0, exp=0.42, competition=0.85 → 89.3%
+2026-03-11 15:34:47 | INFO     | personality_analyzer:134 | PersonalityAnalyzer: {'Technical Depth': 10.0, 'Problem Solving': 8.6, 'Team Collaboration': 4.6, 'Communication': 4.6, 'Leadership': 0.0, 'System Design': 10.0, 'Learning Ability': 0.0, 'Project Ownership': 10.0}
+2026-03-11 15:34:47 | INFO     | radar_chart_generator:78 | Radar chart saved: outputs\skill_radar_chart.png
+2026-03-11 15:34:47 | INFO     | spider_chart_generator:65 | Spider chart saved to outputs\personality_spider_chart.png
+2026-03-11 15:34:47 | INFO     | resume_improvement_advisor:191 | Generated 0 resume improvement suggestions.
+2026-03-11 15:34:47 | INFO     | interview_question_generator:279 | Interview difficulty: senior (combined=0.75)
+2026-03-11 15:34:47 | INFO     | interview_question_generator:339 | Generated 13 interview questions (difficulty=senior).
+2026-03-11 15:34:47 | INFO     | report_generator:236 | Report saved: outputs\analysis_report.txt
+2026-03-11 15:36:25 | WARNING  | resume_parser:92 | pdfminer failed: No /Root object! - Is this really a PDF?
+2026-03-11 15:36:25 | WARNING  | resume_parser:47 | pdfminer extracted 0 words. Trying PyPDF2 fallback...
+2026-03-11 15:36:25 | WARNING  | resume_parser:113 | PyPDF2 failed: EOF marker not found
+2026-03-11 15:36:25 | INFO     | resume_parser:149 | Resume word count: 0
+2026-03-11 15:36:26 | INFO     | groq_ai_client:95 | Groq AI ready. Primary model: llama-3.3-70b-versatile
+2026-03-11 15:36:26 | INFO     | skill_extractor:129 | SkillExtractor ready: 387 vocab + 50 patterns.
+2026-03-11 15:36:26 | INFO     | skill_normalizer:21 | SkillNormalizer: 143 aliases loaded.
+2026-03-11 15:36:26 | INFO     | cache_manager:38 | Cache HIT for 'ai engineer__google' (24 skills cached).
+2026-03-11 15:36:26 | INFO     | skill_gap_analyzer:39 | Gap: matching=0, missing=23, extra=0, coverage=0.0%
+2026-03-11 15:36:26 | INFO     | skill_priority_ranker:87 | Ranked 23 missing skills by priority.
+2026-03-11 15:36:26 | INFO     | regression_model:61 | RegressionScoringModel trained on 17-sample synthetic dataset.
+2026-03-11 15:36:26 | WARNING  | regression_model:81 | Scoring aborted: resume_skills is empty. Cannot produce a valid score.
+2026-03-11 15:37:53 | INFO     | resume_parser:85 | pdfminer OK: 2337 chars.
+2026-03-11 15:37:53 | INFO     | resume_parser:149 | Resume word count: 308
+2026-03-11 15:37:53 | INFO     | groq_ai_client:95 | Groq AI ready. Primary model: llama-3.3-70b-versatile
+2026-03-11 15:37:53 | INFO     | skill_extractor:129 | SkillExtractor ready: 387 vocab + 50 patterns.
+2026-03-11 15:37:53 | INFO     | skill_normalizer:21 | SkillNormalizer: 143 aliases loaded.
+2026-03-11 15:37:54 | INFO     | groq_ai_client:160 | Groq resume extraction: 10 skills → ['python', 'java', 'html', 'php', 'excel automation', 'google sheets', 'nlp', 'chatbots']
+2026-03-11 15:37:54 | INFO     | skill_extractor:188 | Extracted 13 skills total.
+2026-03-11 15:37:54 | INFO     | cache_manager:38 | Cache HIT for 'ai engineer__sahana' (20 skills cached).
+2026-03-11 15:37:55 | INFO     | groq_ai_client:160 | Groq resume extraction: 10 skills → ['python', 'java', 'html', 'php', 'excel automation', 'google sheets', 'nlp', 'chatbots']
+2026-03-11 15:37:55 | INFO     | skill_extractor:188 | Extracted 13 skills total.
+2026-03-11 15:37:55 | INFO     | skill_gap_analyzer:39 | Gap: matching=3, missing=17, extra=10, coverage=15.0%
+2026-03-11 15:37:55 | INFO     | skill_priority_ranker:87 | Ranked 17 missing skills by priority.
+2026-03-11 15:37:55 | INFO     | groq_ai_client:160 | Groq resume extraction: 10 skills → ['python', 'java', 'html', 'php', 'excel automation', 'google sheets', 'nlp', 'chatbots']
+2026-03-11 15:37:55 | INFO     | skill_extractor:188 | Extracted 13 skills total.
+2026-03-11 15:37:55 | INFO     | regression_model:61 | RegressionScoringModel trained on 17-sample synthetic dataset.
+2026-03-11 15:37:55 | DEBUG    | regression_model:94 | Score: 0.213 | match=0.15, missing=0.85, n_skills=13, kw=0.055, exp=0.41
+2026-03-11 15:37:55 | INFO     | probability_estimator:71 | Probability estimate: score=0.213, match=0.15, exp=0.41, competition=0.85 → 9.6%
+2026-03-11 15:37:55 | INFO     | personality_analyzer:134 | PersonalityAnalyzer: {'Technical Depth': 10.0, 'Problem Solving': 5.4, 'Team Collaboration': 7.4, 'Communication': 0.0, 'Leadership': 3.9, 'System Design': 10.0, 'Learning Ability': 0.0, 'Project Ownership': 10.0}
+2026-03-11 15:37:56 | INFO     | radar_chart_generator:78 | Radar chart saved: outputs\skill_radar_chart.png
+2026-03-11 15:37:56 | INFO     | spider_chart_generator:65 | Spider chart saved to outputs\personality_spider_chart.png
+2026-03-11 15:37:56 | INFO     | resume_improvement_advisor:191 | Generated 6 resume improvement suggestions.
+2026-03-11 15:37:56 | INFO     | interview_question_generator:279 | Interview difficulty: junior (combined=0.29)
+2026-03-11 15:37:56 | INFO     | interview_question_generator:339 | Generated 8 interview questions (difficulty=junior).
+2026-03-11 15:37:56 | INFO     | report_generator:236 | Report saved: outputs\analysis_report.txt
+2026-03-11 15:43:56 | INFO     | resume_parser:85 | pdfminer OK: 3798 chars.
+2026-03-11 15:43:56 | INFO     | resume_parser:149 | Resume word count: 521
+2026-03-11 15:43:57 | INFO     | groq_ai_client:95 | Groq AI ready. Primary model: llama-3.3-70b-versatile
+2026-03-11 15:43:57 | INFO     | skill_extractor:129 | SkillExtractor ready: 387 vocab + 50 patterns.
+2026-03-11 15:43:57 | INFO     | skill_normalizer:21 | SkillNormalizer: 143 aliases loaded.
+2026-03-11 15:43:58 | INFO     | groq_ai_client:160 | Groq resume extraction: 32 skills → ['python', 'c++', 'java', 'scikit-learn', 'tensorflow', 'keras', 'pytorch', 'pandas']
+2026-03-11 15:43:58 | INFO     | skill_extractor:188 | Extracted 43 skills total.
+2026-03-11 15:43:59 | DEBUG    | internet_job_scraper:164 | DDG HTTP 202 for 'sahana ai  tech stack requirements'
+2026-03-11 15:44:01 | DEBUG    | internet_job_scraper:164 | DDG HTTP 202 for 'skills required for ai  job'
+2026-03-11 15:44:02 | DEBUG    | internet_job_scraper:164 | DDG HTTP 202 for 'top technical skills ai  2024'
+2026-03-11 15:44:03 | DEBUG    | internet_job_scraper:164 | DDG HTTP 202 for 'ai  job description requirements'
+2026-03-11 15:44:04 | INFO     | groq_ai_client:188 | Groq role skills for 'ai ': ['python', 'tensorflow', 'pytorch', 'machine learning', 'deep learning', 'natural language processing', 'computer vision', 'docker']
+2026-03-11 15:44:04 | INFO     | internet_job_scraper:87 | Groq provided 20 role skills for 'ai '.
+2026-03-11 15:44:04 | INFO     | cache_manager:49 | Cache SET for 'ai__sahana' with 20 skills.
+2026-03-11 15:44:05 | INFO     | groq_ai_client:160 | Groq resume extraction: 30 skills → ['python', 'c++', 'java', 'scikit-learn', 'tensorflow', 'keras', 'pytorch', 'pandas']
+2026-03-11 15:44:05 | INFO     | skill_extractor:188 | Extracted 43 skills total.
+2026-03-11 15:44:05 | INFO     | skill_gap_analyzer:39 | Gap: matching=10, missing=10, extra=30, coverage=50.0%
+2026-03-11 15:44:05 | INFO     | skill_priority_ranker:87 | Ranked 10 missing skills by priority.
+2026-03-11 15:44:06 | INFO     | groq_ai_client:160 | Groq resume extraction: 32 skills → ['python', 'c++', 'java', 'scikit-learn', 'tensorflow', 'keras', 'pytorch', 'pandas']
+2026-03-11 15:44:06 | INFO     | skill_extractor:188 | Extracted 43 skills total.
+2026-03-11 15:44:06 | INFO     | regression_model:61 | RegressionScoringModel trained on 17-sample synthetic dataset.
+2026-03-11 15:44:06 | DEBUG    | regression_model:94 | Score: 0.498 | match=0.50, missing=0.50, n_skills=40, kw=0.113, exp=0.37
+2026-03-11 15:44:06 | INFO     | probability_estimator:71 | Probability estimate: score=0.498, match=0.5, exp=0.37, competition=0.7 → 41.0%
+2026-03-11 15:44:06 | INFO     | personality_analyzer:134 | PersonalityAnalyzer: {'Technical Depth': 10.0, 'Problem Solving': 0.0, 'Team Collaboration': 0.0, 'Communication': 0.0, 'Leadership': 3.9, 'System Design': 0.0, 'Learning Ability': 8.0, 'Project Ownership': 10.0}
+2026-03-11 15:44:07 | INFO     | radar_chart_generator:78 | Radar chart saved: outputs\skill_radar_chart.png
+2026-03-11 15:44:07 | INFO     | spider_chart_generator:65 | Spider chart saved to outputs\personality_spider_chart.png
+2026-03-11 15:44:07 | INFO     | resume_improvement_advisor:191 | Generated 6 resume improvement suggestions.
+2026-03-11 15:44:07 | INFO     | interview_question_generator:279 | Interview difficulty: mid (combined=0.45)
+2026-03-11 15:44:07 | INFO     | interview_question_generator:339 | Generated 14 interview questions (difficulty=mid).
+2026-03-11 15:44:07 | INFO     | report_generator:236 | Report saved: outputs\analysis_report.txt
+2026-03-11 15:44:28 | INFO     | resume_parser:85 | pdfminer OK: 3798 chars.
+2026-03-11 15:44:28 | INFO     | resume_parser:149 | Resume word count: 521
+2026-03-11 15:44:28 | INFO     | groq_ai_client:95 | Groq AI ready. Primary model: llama-3.3-70b-versatile
+2026-03-11 15:44:28 | INFO     | skill_extractor:129 | SkillExtractor ready: 387 vocab + 50 patterns.
+2026-03-11 15:44:28 | INFO     | skill_normalizer:21 | SkillNormalizer: 143 aliases loaded.
+2026-03-11 15:44:29 | INFO     | groq_ai_client:160 | Groq resume extraction: 32 skills → ['python', 'c++', 'java', 'scikit-learn', 'tensorflow', 'keras', 'pytorch', 'pandas']
+2026-03-11 15:44:29 | INFO     | skill_extractor:188 | Extracted 43 skills total.
+2026-03-11 15:44:29 | INFO     | cache_manager:38 | Cache HIT for 'ai engineer__sahana' (20 skills cached).
+2026-03-11 15:44:30 | INFO     | groq_ai_client:160 | Groq resume extraction: 32 skills → ['python', 'c++', 'java', 'scikit-learn', 'tensorflow', 'keras', 'pytorch', 'pandas']
+2026-03-11 15:44:30 | INFO     | skill_extractor:188 | Extracted 43 skills total.
+2026-03-11 15:44:30 | INFO     | skill_gap_analyzer:39 | Gap: matching=16, missing=4, extra=24, coverage=80.0%
+2026-03-11 15:44:30 | INFO     | skill_priority_ranker:87 | Ranked 4 missing skills by priority.
+2026-03-11 15:44:31 | INFO     | groq_ai_client:160 | Groq resume extraction: 32 skills → ['python', 'c++', 'java', 'scikit-learn', 'tensorflow', 'keras', 'pytorch', 'pandas']
+2026-03-11 15:44:31 | INFO     | skill_extractor:188 | Extracted 43 skills total.
+2026-03-11 15:44:31 | INFO     | regression_model:61 | RegressionScoringModel trained on 17-sample synthetic dataset.
+2026-03-11 15:44:31 | DEBUG    | regression_model:94 | Score: 0.78 | match=0.80, missing=0.20, n_skills=40, kw=0.113, exp=0.37
+2026-03-11 15:44:31 | INFO     | probability_estimator:71 | Probability estimate: score=0.78, match=0.8, exp=0.37, competition=0.85 → 73.1%
+2026-03-11 15:44:31 | INFO     | personality_analyzer:134 | PersonalityAnalyzer: {'Technical Depth': 10.0, 'Problem Solving': 0.0, 'Team Collaboration': 0.0, 'Communication': 0.0, 'Leadership': 3.9, 'System Design': 0.0, 'Learning Ability': 8.0, 'Project Ownership': 10.0}
+2026-03-11 15:44:31 | INFO     | radar_chart_generator:78 | Radar chart saved: outputs\skill_radar_chart.png
+2026-03-11 15:44:32 | INFO     | spider_chart_generator:65 | Spider chart saved to outputs\personality_spider_chart.png
+2026-03-11 15:44:32 | INFO     | resume_improvement_advisor:191 | Generated 4 resume improvement suggestions.
+2026-03-11 15:44:32 | INFO     | interview_question_generator:279 | Interview difficulty: mid (combined=0.62)
+2026-03-11 15:44:32 | INFO     | interview_question_generator:339 | Generated 14 interview questions (difficulty=mid).
+2026-03-11 15:44:32 | INFO     | report_generator:236 | Report saved: outputs\analysis_report.txt
+2026-03-11 16:13:07 | INFO     | resume_parser:85 | pdfminer OK: 2337 chars.
+2026-03-11 16:13:07 | INFO     | resume_parser:149 | Resume word count: 308
+2026-03-11 16:13:08 | INFO     | groq_ai_client:95 | Groq AI ready. Primary model: llama-3.3-70b-versatile
+2026-03-11 16:13:08 | INFO     | skill_extractor:129 | SkillExtractor ready: 387 vocab + 50 patterns.
+2026-03-11 16:13:08 | INFO     | skill_normalizer:21 | SkillNormalizer: 143 aliases loaded.
+2026-03-11 16:13:09 | INFO     | groq_ai_client:160 | Groq resume extraction: 10 skills → ['python', 'java', 'html', 'php', 'excel automation', 'google sheets', 'nlp', 'chatbots']
+2026-03-11 16:13:09 | INFO     | skill_extractor:188 | Extracted 13 skills total.
+2026-03-11 16:13:10 | DEBUG    | internet_job_scraper:164 | DDG HTTP 202 for 'google ai engneer tech stack requirements'
+2026-03-11 16:13:11 | DEBUG    | internet_job_scraper:164 | DDG HTTP 202 for 'skills required for ai engneer job'
+2026-03-11 16:13:12 | DEBUG    | internet_job_scraper:164 | DDG HTTP 202 for 'top technical skills ai engneer 2024'
+2026-03-11 16:13:16 | DEBUG    | internet_job_scraper:164 | DDG HTTP 202 for 'ai engneer job description requirements'
+2026-03-11 16:13:17 | INFO     | groq_ai_client:188 | Groq role skills for 'ai engneer': ['python', 'tensorflow', 'pytorch', 'java', 'c++', 'machine learning', 'deep learning', 'natural language processing']
+2026-03-11 16:13:17 | INFO     | internet_job_scraper:87 | Groq provided 24 role skills for 'ai engneer'.
+2026-03-11 16:13:17 | INFO     | cache_manager:49 | Cache SET for 'ai engneer__google' with 24 skills.
+2026-03-11 16:13:18 | INFO     | groq_ai_client:160 | Groq resume extraction: 10 skills → ['python', 'java', 'html', 'php', 'excel automation', 'google sheets', 'nlp', 'chatbots']
+2026-03-11 16:13:18 | INFO     | skill_extractor:188 | Extracted 13 skills total.
+2026-03-11 16:13:18 | INFO     | skill_gap_analyzer:39 | Gap: matching=3, missing=20, extra=10, coverage=13.04%
+2026-03-11 16:13:18 | INFO     | skill_priority_ranker:87 | Ranked 20 missing skills by priority.
+2026-03-11 16:13:18 | INFO     | groq_ai_client:160 | Groq resume extraction: 10 skills → ['python', 'java', 'html', 'php', 'excel automation', 'google sheets', 'nlp', 'chatbots']
+2026-03-11 16:13:18 | INFO     | skill_extractor:188 | Extracted 13 skills total.
+2026-03-11 16:13:18 | INFO     | regression_model:61 | RegressionScoringModel trained on 17-sample synthetic dataset.
+2026-03-11 16:13:18 | DEBUG    | regression_model:94 | Score: 0.195 | match=0.13, missing=0.87, n_skills=13, kw=0.055, exp=0.41
+2026-03-11 16:13:18 | INFO     | probability_estimator:71 | Probability estimate: score=0.195, match=0.1304, exp=0.41, competition=0.7 → 10.8%
+2026-03-11 16:13:18 | INFO     | personality_analyzer:134 | PersonalityAnalyzer: {'Technical Depth': 10.0, 'Problem Solving': 5.4, 'Team Collaboration': 7.4, 'Communication': 0.0, 'Leadership': 3.9, 'System Design': 10.0, 'Learning Ability': 0.0, 'Project Ownership': 10.0}
+2026-03-11 16:13:19 | INFO     | radar_chart_generator:78 | Radar chart saved: outputs\skill_radar_chart.png
+2026-03-11 16:13:20 | INFO     | spider_chart_generator:65 | Spider chart saved to outputs\personality_spider_chart.png
+2026-03-11 16:13:20 | INFO     | resume_improvement_advisor:191 | Generated 6 resume improvement suggestions.
+2026-03-11 16:13:20 | INFO     | interview_question_generator:279 | Interview difficulty: junior (combined=0.28)
+2026-03-11 16:13:20 | INFO     | interview_question_generator:339 | Generated 7 interview questions (difficulty=junior).
+2026-03-11 16:13:20 | INFO     | report_generator:236 | Report saved: outputs\analysis_report.txt

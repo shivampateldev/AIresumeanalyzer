@@ -1,0 +1,862 @@
+===============================================================================
+  AI RESUME INTELLIGENCE ANALYZER — COMPLETE CONCEPTS GUIDE
+  Every library, method, pattern, and design decision explained in depth.
+===============================================================================
+
+  Written for: d:\temp\airesumeprt
+  Python version: 3.12
+
+===============================================================================
+SECTION 1 — PROJECT ARCHITECTURE OVERVIEW
+===============================================================================
+
+WHY A MODULE-BASED ARCHITECTURE?
+  The project splits every concern into a separate Python file inside modules/.
+  This is called "separation of concerns" — each module does one job only.
+  Why? Because:
+    - If the PDF parser breaks, you fix only resume_parser.py
+    - If you want to swap Groq for OpenAI, you change only groq_ai_client.py
+    - Unit testing becomes possible (test one module at a time)
+    - Multiple developers can work simultaneously without merge conflicts
+
+THE PIPELINE PATTERN
+  The system uses a Linear Pipeline:
+    Input → Stage1 → Stage2 → ... → Output
+  Each stage receives data from the previous stage and passes enriched data
+  to the next. This is the same pattern used in data engineering (ETL pipelines)
+  and Unix shell piping (command1 | command2 | command3).
+
+  In Python code this looks like:
+    resume_text   = parser.extract_text(resume_input)
+    raw_skills    = extractor.extract_skills(resume_text)
+    norm_skills   = normalizer.normalize_list(raw_skills)
+    role_skills   = scraper.fetch_skills(role, company)
+    gap           = analyzer.analyze(norm_skills, role_skills)
+    score         = model.predict(...)
+    report        = generator.print_report(...)
+
+
+===============================================================================
+SECTION 2 — PYTHON CORE CONCEPTS USED
+===============================================================================
+
+--- 2.1 CLASSES AND INSTANCES ---
+
+  Every module uses a Python class. Example:
+    class SkillExtractor:
+        def __init__(self, groq_client=None):
+            ...
+        def extract_skills(self, text):
+            ...
+
+  WHY CLASSES?
+    - State persistence: extractor keeps its vocabulary loaded in memory
+    - Reuse: create one extractor, call extract_skills() many times
+    - Configuration: pass groq_client at construction, not every call
+
+  INSTANCE vs CLASS method:
+    Instance method:   def extract_skills(self, text)   → uses self.vocabulary
+    Static method:     @staticmethod def generate(...)  → no self, pure function
+    Class method:      @classmethod def create(cls)     → receives the class itself
+
+  ReportGenerator uses @staticmethod because it has no internal state to keep.
+
+--- 2.2 TYPE HINTS ---
+
+  Python 3.9+ supports built-in generics:
+    def extract_skills(self, text: str) -> list[str]:
+    def analyze(self, resume: list[str], role: list[str]) -> dict:
+
+  WHY TYPE HINTS?
+    - IDEs autocomplete correctly
+    - Bugs caught earlier (wrong type passed)
+    - Self-documenting code
+    union types (Python 3.10+):
+    def predict(self, score: float | None) -> float | None:
+    This means: the argument can be either float OR None.
+
+--- 2.3 F-STRINGS ---
+
+  All string formatting uses f-strings (Python 3.6+):
+    name = "Python"
+    print(f"I love {name}")         → "I love Python"
+    print(f"{score:.3f}")           → "0.210"  (3 decimal places)
+    print(f"{text:<25}")            → left-align in 25 chars
+    print(f"{number:>3}")           → right-align in 3 chars
+
+  WHY F-STRINGS over .format() or %?
+    - Faster at runtime (compiled to bytecode)
+    - More readable (expression inline with text)
+    - Support complex expressions: f"{len(skills)} skills found"
+
+--- 2.4 LIST COMPREHENSIONS ---
+
+  Instead of:
+    result = []
+    for s in skills:
+        if len(s) > 2:
+            result.append(s.lower())
+
+  We write:
+    result = [s.lower() for s in skills if len(s) > 2]
+
+  This is a list comprehension. It produces a new list by transforming each
+  element. It is faster than a for-loop because it avoids Python's function
+  call overhead for list.append() on every iteration.
+
+  SET COMPREHENSION:
+    skill_set = {s.lower() for s in skills}
+    → produces a set (no duplicates, O(1) lookup)
+
+  DICT COMPREHENSION:
+    counts = {skill: freq for skill, freq in counter.most_common(20)}
+
+--- 2.5 SET OPERATIONS ---
+
+  Sets are unordered collections with NO duplicates and O(1) membership test.
+  The skill gap analysis relies heavily on set math:
+
+    resume = {"python", "git", "mysql"}
+    role   = {"python", "docker", "sql", "git"}
+
+    matching = resume & role           → {"python", "git"}  (intersection)
+    missing  = role - resume           → {"docker", "sql"}   (difference)
+    extra    = resume - role           → {"mysql"}           (difference)
+    all_skills = resume | role         → {"python", "git", "mysql", "docker", "sql"}
+
+  WHY SETS NOT LISTS?
+    - list.index("python") → O(n) scan
+    - "python" in my_set   → O(1) hash lookup
+    For 300 skills this is 300x faster.
+
+--- 2.6 EXCEPTION HANDLING ---
+
+  Pattern used throughout:
+    try:
+        from pdfminer.high_level import extract_text
+        text = extract_text(path)
+    except ImportError:
+        logger.warning("pdfminer not installed")
+        return ""
+    except Exception as e:
+        logger.error(f"pdfminer failed: {e}")
+        return ""
+
+  ImportError  — library not installed
+  FileNotFoundError — file path wrong
+  Exception    — catch-all (use sparingly, always log the error)
+  The pattern: try the operation, handle specific errors, fall back gracefully.
+
+--- 2.7 *args AND **kwargs ---
+
+  ReportGenerator.print_report() accepts many keyword arguments:
+    def print_report(self, target_role, company, resume_skills, ...):
+
+  In main.py we call it with explicit keyword names:
+    ReportGenerator.print_report(
+        target_role=TARGET_ROLE,
+        company=COMPANY,
+        resume_skills=resume_skills,
+        ...
+    )
+
+  WHY KEYWORD ARGUMENTS?
+    - Order doesn't matter at call site
+    - Self-documenting: reader sees what each value means
+    - Adding a new parameter doesn't break existing callers
+
+
+===============================================================================
+SECTION 3 — LIBRARIES: WHY EACH WAS CHOSEN
+===============================================================================
+
+--- 3.1 re (Regular Expressions — BUILT-IN) ---
+
+  Regex is a pattern matching language for strings. Python's built-in re
+  module implements it.
+
+  PATTERNS USED IN THIS PROJECT:
+    r"\bpython\b"         → word boundary match (won't match "cpython")
+    r"\bc\+\+\b"          → matches "C++" literally (\ escapes the +)
+    r"(?<![a-z0-9\+])c\+\+(?![a-z0-9])"
+                          → negative lookbehind: c++ NOT preceded by a-z,0-9,+
+    r"(\d+)\s*years?"     → capture group: 1+ digits then optional "years"
+
+  KEY re FUNCTIONS:
+    re.search(pattern, text)   → finds FIRST match anywhere in string
+    re.findall(pattern, text)  → returns ALL matches as list
+    re.sub(pattern, repl, text)→ replace all matches with repl
+    re.compile(pattern)        → pre-compile for repeated use (faster)
+
+  WHY COMPILE?
+    pattern = re.compile(r"\bpython\b")
+    # used 10,000 times in a loop:
+    for text in corpus:
+        pattern.search(text)
+    vs:
+    for text in corpus:
+        re.search(r"\bpython\b", text)   # recompiles each time
+
+  re.compile() saves 30-50% time in loops.
+
+  LOOKAHEAD/LOOKBEHIND:
+    (?<!X)Y   → Y not preceded by X  (negative lookbehind)
+    (?!X)Y    → Y not followed by X  (negative lookahead)
+    (?=X)     → position followed by X (positive lookahead)
+    Used to match C++ without matching the C inside "architect"
+
+--- 3.2 os (Operating System Interface — BUILT-IN) ---
+
+  os.path.join("d:/temp", "outputs", "report.txt")
+    → "d:/temp/outputs/report.txt" on Windows
+    → "d:/temp/outputs/report.txt" on Linux
+  WHY? Slash direction differs by OS. os.path.join is always correct.
+
+  os.path.exists(path)     → True/False if file/folder exists
+  os.path.dirname(__file__)→ directory of the current script
+  os.makedirs(path, exist_ok=True) → create folder AND parent folders
+  os.environ.get("KEY", "") → read environment variable safely
+
+--- 3.3 json (JSON Parsing — BUILT-IN) ---
+
+  JSON = JavaScript Object Notation. Universal data exchange format.
+    json.load(file_handle)     → parse JSON file into Python dict/list
+    json.loads(string)         → parse JSON string into Python dict/list
+    json.dumps(obj, indent=2)  → convert Python object to JSON string
+    json.dump(obj, file)       → write Python object to JSON file
+
+  Used for:
+    skill_categories.json  → dict {category: [skills...]}
+    skill_aliases.json     → dict {alias: canonical}
+    Groq API response parsing
+
+--- 3.4 math (BUILT-IN) ---
+
+  math.log(x)      → natural logarithm (base e)
+  math.log(x, b)   → logarithm base b
+  math.exp(x)       → e^x (inverse of log)
+
+  PERSONALITY ANALYZER uses log scaling:
+    score = math.log(hits + 1) / math.log(threshold + 1) * 10
+
+  WHY LOG SCALE?
+    Linear:  2 keywords → 2/30 * 10 = 0.67/10 (too low)
+    Log:     2 keywords → log(3)/log(7) * 10 ≈ 5.7/10 (realistic)
+    Log compresses large ranges and gives credit for even 1-2 hits.
+
+  PROBABILITY ESTIMATOR uses logistic (sigmoid) function:
+    p = 1 / (1 + math.exp(-logit))
+    Where logit = a*score + b*match - c*competition + bias
+    This maps any real number to [0, 1] — a probability.
+    Why sigmoid? It's differentiable, bounded, and models probability naturally.
+
+--- 3.5 requests ---
+
+  HTTP library for Python. Makes GET/POST requests to websites.
+
+  USAGE:
+    resp = requests.get(url, headers=headers, timeout=12)
+    resp.status_code   → 200 = OK, 404 = Not Found, 503 = Server Error
+    resp.text          → response body as string
+    resp.headers       → dict of response headers
+
+  WHY requests NOT urllib?
+    requests handles redirects, sessions, timeouts, SSL automatically.
+    urllib (built-in) requires 3x more code for the same result.
+    For web scraping: requests is the industry standard.
+
+  TIMEOUT: always set timeout=N seconds.
+    Without timeout, a hanging server blocks the program forever.
+
+--- 3.6 BeautifulSoup (beautifulsoup4) ---
+
+  HTML parser. Turns raw HTML text into a navigable tree.
+
+  USAGE:
+    from bs4 import BeautifulSoup
+    soup = BeautifulSoup(html_text, "html.parser")
+    snippets = soup.select(".result__snippet")  → CSS selector
+    for div in snippets:
+        text = div.get_text(separator=" ")      → extract plain text
+    links = soup.find_all("a", href=True)       → find all <a> tags with href
+
+  WHY bs4?
+    - Handles malformed HTML (real websites are never perfect)
+    - CSS selectors make targeting specific elements easy
+    - Auto-detects encoding
+
+  PARSER CHOICES:
+    "html.parser"  → built-in Python parser, slower but no install
+    "lxml"         → C-based, 3-5x faster, our choice for production
+    "html5lib"     → most lenient, slowest
+
+  OUR CHOICE: "html.parser" as fallback, lxml if available.
+
+--- 3.7 lxml ---
+
+  C-based XML/HTML parser. Used as BeautifulSoup's fast backend.
+  No code changes needed — just install it and bs4 auto-uses it.
+  3-5x faster than html.parser for large pages.
+
+--- 3.8 numpy ---
+
+  Numerical computing library. Core of Python's scientific ecosystem.
+
+  KEY CONCEPTS:
+    np.array([1, 2, 3])              → ndarray (N-dimensional array)
+    np.zeros(10)                     → array of 10 zeros
+    np.dot(vec1, vec2)               → dot product (similarity score)
+    np.linalg.norm(vec)              → vector length (L2 norm)
+
+  SKILL VECTORIZER uses numpy:
+    universe = sorted(all_skills)
+    resume_vec = np.array([1 if s in resume_set else 0 for s in universe])
+    role_vec   = np.array([1 if s in role_set   else 0 for s in universe])
+
+  Each skill = one dimension. 1 = has skill, 0 = does not.
+  This encodes human knowledge into machine-readable numbers.
+
+  WHY numpy NOT plain Python lists?
+    np.dot(a, b)      → vectorized C loop, 100x faster than Python loop
+    Broadcasting:     multiply entire array by scalar in one op
+    Memory efficient: arrays stored as contiguous C memory blocks
+
+--- 3.9 scikit-learn ---
+
+  Machine learning library. We use:
+
+  LinearRegression:
+    from sklearn.linear_model import LinearRegression
+    model = LinearRegression()
+    model.fit(X_train, y_train)
+    model.predict(X_new)
+
+  WHY LinearRegression for scoring?
+    Resume score = weighted sum of features:
+      score = w1*match_ratio + w2*skill_count + w3*experience - w4*missing
+    That IS a linear regression formula.
+    We pre-train it on curated calibration data so the weights are reasonable.
+
+  MinMaxScaler:
+    from sklearn.preprocessing import MinMaxScaler
+    scaler = MinMaxScaler()
+    scaler.fit([[0],[1]])
+    scaler.transform([[0.5]])   → [[0.5]] mapped to [0,1]
+
+  Ensures all features are on the same scale before feeding to the model.
+
+--- 3.10 matplotlib ---
+
+  Python's core plotting library. Every chart in the project uses it.
+
+  RADAR CHART (polar plot):
+    fig = plt.figure(figsize=(8,8), facecolor="#1a1a2e")
+    ax  = fig.add_subplot(111, polar=True)  → polar coordinate system
+    ax.plot(angles, values)                 → draw polygon
+    ax.fill(angles, values, alpha=0.25)     → fill with transparency
+
+  WHY POLAR PLOT for skills?
+    A radar chart maps each category to an angle (360°/N_categories).
+    The distance from center = score for that category.
+    This gives instant visual of strengths vs gaps.
+
+  SPIDER CHART (same technique, different data):
+    Same polar axes, but 8 axes = 8 personality competencies.
+
+  KEY MATPLOTLIB CONCEPTS:
+    fig, ax = plt.subplots()  → Figure (window) + Axes (plot area)
+    ax.set_facecolor(color)   → background color
+    plt.savefig(path, dpi=150, bbox_inches="tight")  → save to file
+    plt.close(fig)            → release memory (important in loops!)
+    alpha=0.25                → transparency 0=invisible, 1=opaque
+
+--- 3.11 pdfminer.six ---
+
+  Pure-Python PDF text extractor. Handles complex PDF layouts.
+
+  USAGE:
+    from pdfminer.high_level import extract_text
+    text = extract_text("resume.pdf")
+
+  WHY pdfminer FIRST?
+    Modern PDFs embed text as Unicode glyphs with font mappings.
+    pdfminer.six correctly handles: CJK fonts, ligatures (fi, fl),
+    multi-column layouts, rotated text.
+
+  WHY PyPDF2 AS FALLBACK?
+    PyPDF2 is faster but fails on complex font encodings.
+    For simple single-column PDFs it works fine.
+
+--- 3.12 PyPDF2 ---
+
+  PDF library. Used as fallback after pdfminer.six.
+    from PyPDF2 import PdfReader
+    reader = PdfReader("resume.pdf")
+    for page in reader.pages:
+        text = page.extract_text()
+
+--- 3.13 groq ---
+
+  Official Groq AI Python SDK. Wraps the Groq REST API.
+
+  USAGE:
+    from groq import Groq
+    client = Groq(api_key=os.environ["GROQ_API_KEY"])
+    response = client.chat.completions.create(
+        model="llama-3.3-70b-versatile",
+        messages=[{"role": "user", "content": prompt}],
+        temperature=0.1,
+        max_tokens=600,
+    )
+    text = response.choices[0].message.content
+
+  WHY GROQ?
+    Groq runs LLMs on custom LPU (Language Processing Unit) chips.
+    Speed: 500-800 tokens/second (10x faster than GPU-based APIs).
+    Cost: free tier is generous (6000 RPD, 14400 RPM with llama3).
+    No GPU required locally — the inference runs on Groq's cloud.
+
+  MODELS:
+    llama-3.3-70b-versatile  → primary: best reasoning, 70B params
+    llama-3.1-8b-instant     → fallback: faster, lighter, good enough
+    Both are Meta's Llama 3.x family, open-source weights.
+
+  TEMPERATURE:
+    0.0 → deterministic (same input = same output every time)
+    0.1 → near-deterministic (used for skill extraction)
+    0.5 → creative (balanced)
+    1.0 → highly random (used for creative text)
+    We use 0.05–0.15 for skill extraction (want consistent structured output).
+
+  MAX_TOKENS:
+    Limits response length. 600 tokens ≈ 450 words ≈ a JSON list of 20 skills.
+    Prevents runaway responses that waste API quota.
+
+--- 3.14 python-dotenv ---
+
+  Loads .env files into os.environ.
+    from dotenv import load_dotenv
+    load_dotenv()                     → reads .env file
+    key = os.environ["GROQ_API_KEY"]  → now available
+
+  WHY .env FILES?
+    NEVER hardcode API keys in source code.
+    Reason: git commits are permanent; once pushed, key is compromised forever.
+    .env files: added to .gitignore, never committed.
+
+--- 3.15 collections.Counter ---
+
+  Built-in dict subclass that counts hashable objects.
+
+    from collections import Counter
+    counter = Counter()
+    counter["python"] += 2   → "python" appears in 2 snippets
+    counter["docker"] += 1
+    counter.most_common(10)  → [("python", 2), ("docker", 1)]
+
+  Used in internet_job_scraper.py to rank skills by how often they appear
+  across multiple search result snippets. More appearances = more important
+  for that role.
+
+--- 3.16 datetime ---
+
+  Built-in module for dates and times.
+    from datetime import datetime
+    datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    → "2026-03-11 08:17:07"
+
+  Used in report_generator.py to timestamp each report.
+
+
+===============================================================================
+SECTION 4 — KEY ALGORITHMS AND TECHNIQUES
+===============================================================================
+
+--- 4.1 HYBRID SKILL EXTRACTION (4-PASS PIPELINE) ---
+
+  WHY 4 passes? No single method catches everything:
+    Pass 0: ORIGINAL text   → C++, C# BEFORE lowercasing breaks them
+    Pass 1: Regex patterns  → 40+ explicit patterns (node.js, .net, mysql...)
+    Pass 2: Vocabulary      → skill_categories.json, 300+ skills
+    Pass 3: Groq AI         → catches what regex missed (collocations, context)
+
+  THE C++ PROBLEM:
+    If you lowercase "C++" you get "c++".
+    If you then run regex r"\b[a-z]+\b" you get "c" (stopped at "+").
+    Solution: match C++ on the ORIGINAL text before any cleaning.
+
+  LOOKBEHIND/LOOKAHEAD for C++:
+    Pattern: r"(?<![a-z0-9\+])c\+\+(?![a-z0-9])"
+    This says: match "c++" only if not preceded by alphanumeric or plus,
+    and not followed by alphanumeric.
+    Without this, "vc++" would match the c++ inside it.
+
+--- 4.2 ALIAS NORMALIZATION ---
+
+  The problem:
+    Resume says "k8s". Role requires "kubernetes".
+    Without normalization, they don't match even though they're the same thing.
+
+  Solution — skill_aliases.json:
+    {
+      "k8s": "kubernetes",
+      "sklearn": "scikit-learn",
+      "postgres": "postgresql",
+      "tf": "tensorflow"
+    }
+
+  normalize_list() applies this mapping to every skill before comparison.
+  This is called canonical form normalization.
+
+--- 4.3 SKILL GAP ANALYSIS (SET MATHEMATICS) ---
+
+  This is pure discrete mathematics:
+    Let R = resume_skills  (set)
+    Let J = role_skills    (set)
+
+    Matching = R ∩ J       (intersection — in both)
+    Missing  = J - R       (difference — in role but not resume)
+    Extra    = R - J       (difference — in resume but not role)
+    Coverage = |R ∩ J| / |J| × 100%
+
+  Example:
+    R = {python, git, mysql, html}
+    J = {python, docker, sql, git, machine learning}
+    Matching = {python, git}     → 2 skills
+    Missing  = {docker, sql, machine learning}  → candidate must learn
+    Extra    = {mysql, html}     → bonus, not penalized
+    Coverage = 2/5 = 40%
+
+--- 4.4 REGRESSION MODEL FOR SCORING ---
+
+  Features (inputs) used:
+    1. skill_match_ratio    = matching / role_skills  (0-1)
+    2. missing_skill_ratio  = missing / role_skills   (0-1)
+    3. skill_count          = total resume skills     (int)
+    4. keyword_density      = skill tokens / total words (0-1)
+    5. experience_signal    = years+seniority+verbs   (0-1)
+
+  The model was "trained" on 12 calibration points:
+    (0.0 match, 1.0 missing, 2 skills) → score 0.15  (beginner)
+    (0.5 match, 0.5 missing, 12 skills)→ score 0.55  (mid)
+    (0.9 match, 0.1 missing, 25 skills)→ score 0.90  (expert)
+  etc.
+
+  WHY NOT DEEP LEARNING?
+    We have ~12 data points. Deep learning needs thousands.
+    Linear regression with 5 features is appropriate and interpretable.
+    The score is also clamped: max(0, min(1, score)).
+
+--- 4.5 THE LOGISTIC FUNCTION FOR PROBABILITY ---
+
+  Formula:
+    probability = 1 / (1 + e^(-(a*S + b*M + c*E - d*C + bias)))
+
+  Where:
+    S = resume_score  (from regression model)
+    M = skill_match_ratio
+    E = experience_signal
+    C = competition_factor (how hard the role is to get)
+    a,b,c,d = manually calibrated weights
+    bias = offset to center the probability realistically
+
+  WHY LOGISTIC?
+    - Output is always between 0 and 1 (valid probability)
+    - Non-linear: going from 0.8 to 0.9 score matters more than 0.1 to 0.2
+    - Standard tool for binary classification problems
+
+--- 4.6 LOG SCALING IN PERSONALITY ANALYZER ---
+
+  The keyword lists have 25-30 words each.
+  A typical 2-year-experience resume might match 4-6 of them.
+
+  Problem with linear:    4/30 * 10 = 1.3/10 (too low)
+  Problem with log:       log(5)/log(7) * 10 = 8.2/10 (too high if threshold=7)
+
+  Our formula:
+    threshold = 0.20 * len(keywords)    → 20% hit rate = "full" score
+    score = log(hits+1) / log(threshold+1) * 10 * weight
+
+  Result: 2 hits → ~5/10, 5 hits → ~8/10, 10+ hits → 10/10
+
+--- 4.7 SKILL PRIORITY RANKING ---
+
+  Formula:
+    priority = 0.50 * job_importance
+             + 0.30 * inverse_learning_time
+             + 0.20 * market_demand
+
+  job_importance   = position in role_skills list (first = most important)
+  learning_time    = estimated weeks to learn (shorter = higher priority)
+  market_demand    = probability of appearing on job boards
+
+  WHY WEIGHTS 0.5, 0.3, 0.2?
+    Job importance matters most (employer-defined requirement).
+    Learning speed helps candidates prioritize quick wins.
+    Market demand ensures they learn industry-standard tools.
+
+
+===============================================================================
+SECTION 5 — DESIGN PATTERNS USED
+===============================================================================
+
+--- 5.1 FACTORY / DEPENDENCY INJECTION ---
+
+  main.py creates all objects and injects dependencies:
+    groq   = GroqAIClient()
+    extractor = SkillExtractor(groq_client=groq)    ← Groq injected
+    scraper   = InternetJobScraper(skill_extractor=extractor, groq_client=groq)
+
+  WHY INJECTION?
+    SkillExtractor doesn't create Groq. It RECEIVES Groq.
+    This means you can pass a MockGroqClient in tests.
+    It also means SkillExtractor works WITHOUT Groq (just skip Pass 3).
+
+--- 5.2 STRATEGY PATTERN (FALLBACK CHAIN) ---
+
+  InternetJobScraper.fetch_skills():
+    1. Try cache
+    2. Try DuckDuckGo scraping
+    3. Try Groq AI
+    4. Return []
+
+  Each "strategy" is tried in order. The system degrades gracefully.
+  If strategy 1 works, 2 and 3 are never called.
+  If all fail, the pipeline validation catches the empty list.
+
+--- 5.3 SINGLETON-LIKE INIT ---
+
+  All heavy objects are created ONCE in main() before the analysis loop:
+    skill_extractor = SkillExtractor()  # loads 300 skills once
+    scoring_model   = RegressionScoringModel()  # fits model once
+
+  Then reused across multiple resumes if user runs multiple analyses.
+  WHY? Loading vocabulary and fitting models takes 200-500ms.
+  Doing it every analysis would add 1+ second per run.
+
+--- 5.4 CACHING PATTERN ---
+
+  CacheManager stores scraped results keyed by (role, company):
+    cache_key = f"{role.lower()}_{company.lower()}"
+    If key exists AND < 24 hours old → return cached result
+    Else → scrape, store result
+
+  WHY 24 HOURS?
+    Job requirements don't change hourly.
+    Scraping the same query repeatedly wastes bandwidth and risks IP blocks.
+    24h cache is fast but stays fresh.
+
+
+===============================================================================
+SECTION 6 — WEB SCRAPING DEEP DIVE
+===============================================================================
+
+  DUCKDUCKGO HTML ENDPOINT:
+    URL: https://html.duckduckgo.com/html/?q=skills+for+ai+engineer
+    WHY DDG not Google?
+      Google requires API key ($$$) and blocks scrapers aggressively.
+      DuckDuckGo has a lightweight HTML-only endpoint that works without JS.
+
+  SCRAPING STRATEGY:
+    1. Build 5 queries for the role:
+         "skills required for AI engineer job"
+         "top technical skills AI engineer 2024"
+         "AI engineer job description requirements"
+    2. Fetch DDG HTML page
+    3. Parse .result__snippet elements (CSS class) → short text summaries
+    4. Snippets are weighted x2 (more reliable than full pages)
+    5. Fetch top 2-3 URLs from results
+    6. Skip JS-heavy sites (LinkedIn, Glassdoor → they require login)
+    7. Count skill frequency across all text
+    8. Return top 20 by frequency
+
+  USER-AGENT ROTATION:
+    headers = {"User-Agent": random.choice(_USER_AGENTS)}
+    WHY? Some servers block requests with the default "python-requests" UA.
+    Rotating between Chrome/Firefox/Safari UAs reduces block rate.
+
+  TIMEOUT:
+    requests.get(url, timeout=12)  → give up after 12 seconds
+    WHY? Without timeout, a hung server blocks the program.
+    12 seconds is long enough for slow servers, short enough to stay responsive.
+
+
+===============================================================================
+SECTION 7 — ENCODING AND WINDOWS COMPATIBILITY
+===============================================================================
+
+  WINDOWS TERMINAL ENCODING PROBLEM:
+    Windows PowerShell default encoding = CP1252 (Western European subset)
+    CP1252 cannot represent: ★ ✓ ✗ → ← 📅 🎓 (Unicode outside Latin-1)
+    Printing these crashes with UnicodeEncodeError.
+
+  OUR SOLUTION:
+    All terminal output uses ASCII only:
+      ★ → *
+      ✓ → [HAVE]
+      ✗ → [MISS]
+      → → ->
+      📅 → >>
+    The .txt file is saved with encoding="utf-8" which supports all chars.
+
+  READING FILES SAFELY:
+    open(path, encoding="utf-8", errors="replace")
+    errors="replace" → replace undecodable bytes with "?" instead of crashing.
+
+  SAFE PRINT PATTERN:
+    try:
+        print(text)
+    except UnicodeEncodeError:
+        safe = text.encode("ascii", errors="replace").decode("ascii")
+        print(safe)
+
+
+===============================================================================
+SECTION 8 — GROQ AI INTEGRATION DEEP DIVE
+===============================================================================
+
+  PROMPT ENGINEERING:
+    The quality of AI output depends entirely on the prompt.
+
+    For skill extraction:
+      "Extract ALL technical skills from this resume."
+      "Return ONLY a valid JSON array, no explanation."
+      "Preserve exact names: C++, C#, .NET, Node.js"
+      Temperature = 0.05 (near-deterministic)
+
+    For role skills:
+      "List the top 20 most important technical skills for {role} in 2025."
+      "Rank them from most critical to least critical."
+      Temperature = 0.15 (slightly more creative)
+
+  JSON PARSING FROM LLM RESPONSE:
+    LLMs sometimes add prose around JSON. Robust parser:
+      1. Search for [...] pattern in response
+      2. Parse as JSON using json.loads()
+      3. If that fails, split by commas/newlines, clean up manually
+
+  MODEL FALLBACK:
+    Try llama-3.3-70b-versatile first.
+    If error contains "decommissioned" or "not found" → try llama-3.1-8b-instant.
+    This makes the system future-proof as Groq retires old models.
+
+
+===============================================================================
+SECTION 9 — DATA FILES EXPLAINED
+===============================================================================
+
+  skill_categories.json:
+    Maps skills to 14 categories:
+    {
+      "Programming Languages": ["python", "java", "c++", ...],
+      "Machine Learning":       ["tensorflow", "pytorch", ...],
+      "Databases":              ["mysql", "postgresql", ...],
+      ...
+    }
+    Used by: skill_extractor (vocabulary), radar_chart (axis labels)
+
+  skill_aliases.json:
+    Maps variant names to canonical forms:
+    {
+      "k8s":      "kubernetes",
+      "sklearn":  "scikit-learn",
+      "postgres": "postgresql",
+      "tf":       "tensorflow"
+    }
+    Used by: skill_normalizer (before gap analysis)
+
+  WHY ONLY THESE TWO STATIC FILES?
+    skill_database.json (deleted) → hardcoded skills = brittle
+    fallback_role_skills.json (deleted) → hardcoded role skills = inaccurate
+    The system discovers skills dynamically from the internet + AI.
+    Static files are only for normalization — the shape of skills, not their content.
+
+
+===============================================================================
+SECTION 10 — CHARTS: HOW THEY WORK
+===============================================================================
+
+  RADAR CHART:
+    1. Get skill categories for role and resume
+    2. Count skills per category
+    3. Create N=len(categories) equally-spaced angles around 360°
+       angles = [2*pi*i/N for i in range(N)]
+    4. Close the polygon by repeating the first point at the end
+    5. Plot role as one filled polygon (cyan, 25% opacity)
+    6. Plot resume as another filled polygon (green, 25% opacity)
+    7. Label each axis with category name
+    8. Dark background (#1a1a2e) → modern dark theme
+
+  SPIDER CHART:
+    Same technique, but:
+    - 8 axes = 8 personality competencies
+    - One polygon = candidate's competency profile
+    - Axes labeled: Technical Depth, Problem Solving, etc.
+
+  SAVING:
+    plt.savefig(path, dpi=150, bbox_inches="tight", facecolor=fig.get_facecolor())
+    dpi=150: resolution (150 dots per inch = sharp on screen and print)
+    bbox_inches="tight": remove whitespace padding around chart
+    plt.close(fig): CRITICAL — releases matplotlib memory. Without this,
+      hundreds of hidden figures accumulate causing memory leak.
+
+
+===============================================================================
+SECTION 11 — ERROR HANDLING PHILOSOPHY
+===============================================================================
+
+  LEVELS OF ERROR HANDLING:
+
+  1. VALIDATION CHECKPOINT (before stage):
+       if len(resume_skills) < 2:
+           abort with helpful message
+     Prevents invalid data from propagating and producing wrong results.
+
+  2. GRACEFUL DEGRADATION (inside stage):
+       try:
+           text = pdfminer.extract(path)
+       except Exception:
+           text = pypdf2.extract(path)   # fallback
+     Stage completes, just with less-good method.
+
+  3. SAFE DEFAULTS (post-failure):
+       score = model.predict(...)
+       if score is None:
+           show "Score not computed" in report
+     Never show random/wrong numbers. Show "unavailable" instead.
+
+  4. LOGGING (always):
+       logger.warning(f"pdfminer failed: {e}")
+     Every exception is logged. Logs written to app.log.
+     User sees clean messages. Developer sees full traceback in log.
+
+
+===============================================================================
+SECTION 12 — HOW TO EXTEND THE SYSTEM
+===============================================================================
+
+  ADD A NEW SKILL CATEGORY:
+    Edit data/skill_categories.json
+    Add: "Quantum Computing": ["qiskit", "cirq", "quantum annealing"]
+    The radar chart and extractor auto-pick it up.
+
+  ADD A NEW SKILL ALIAS:
+    Edit data/skill_aliases.json
+    Add: "k3s": "kubernetes"
+    The normalizer auto-uses it.
+
+  ADD A NEW GROQ MODEL:
+    In groq_ai_client.py, add to _MODELS list:
+    _MODELS = ["llama-3.3-70b-versatile", "llama-3.1-8b-instant", "new-model"]
+
+  ADD A NEW PIPELINE STAGE:
+    1. Create modules/new_stage.py with a class
+    2. Import in main.py
+    3. Instantiate in main() function
+    4. Call in run_analysis() at the correct position
+    5. Pass result to report_generator
+
+===============================================================================
+  END OF CONCEPTS GUIDE
+  File: d:\temp\airesumeprt\CONCEPTS.txt
+===============================================================================

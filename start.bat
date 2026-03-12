@@ -1,0 +1,9 @@
+@echo off
+echo Starting AI Resume Intelligence Analyzer...
+
+echo [1/2] Starting Python FastAPI Backend on Port 8000...
+start cmd /k "title Resume Backend && python -m uvicorn backend:app --host 0.0.0.0 --port 8000 --reload"
+
+echo [2/2] Starting React Vite Frontend and opening browser...
+cd frontend
+npm run dev -- --open

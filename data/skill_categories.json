@@ -1,0 +1,101 @@
+{
+  "Programming Languages": [
+    "python", "java", "javascript", "typescript", "c", "c++", "c#", "go", "golang",
+    "rust", "ruby", "php", "swift", "kotlin", "scala", "r", "matlab", "perl",
+    "haskell", "elixir", "dart", "lua", "groovy", "julia", "fortran", "cobol",
+    "objective-c", "assembly", "vba", "bash", "shell", "powershell", "fish"
+  ],
+  "Web Frameworks": [
+    "react", "vue", "angular", "next.js", "nuxt", "svelte", "gatsby", "ember",
+    "node.js", "express", "fastapi", "flask", "django", "spring boot", "rails",
+    "laravel", "symphony", "fastify", "nestjs", "hapi", "koa", "fiber",
+    "graphql", "rest api", "grpc", "websockets", "microservices", "htmx", "alpinejs",
+    "html", "css", "sass", "less", "tailwind", "bootstrap", "jquery"
+  ],
+  "Machine Learning": [
+    "machine learning", "deep learning", "neural networks", "reinforcement learning",
+    "transfer learning", "federated learning", "semi-supervised learning", "self-supervised learning",
+    "supervised learning", "unsupervised learning", "linear regression", "logistic regression",
+    "decision trees", "random forest", "gradient boosting", "xgboost", "lightgbm", "catboost",
+    "support vector machine", "svm", "k-nearest neighbors", "naive bayes", "pca",
+    "clustering", "dimensionality reduction", "feature engineering", "hyperparameter tuning",
+    "model optimization", "model deployment", "model monitoring", "a/b testing",
+    "statistical modeling", "bayesian inference", "causal inference", "explainability", "xai",
+    "time series analysis", "anomaly detection", "recommendation systems", "mlops"
+  ],
+  "ML Frameworks": [
+    "tensorflow", "pytorch", "keras", "scikit-learn", "sklearn", "xgboost", "lightgbm",
+    "catboost", "hugging face", "transformers", "fastai", "jax", "flax", "paddle",
+    "mxnet", "theano", "caffe", "onnx", "openai api", "anthropic api", "langchain",
+    "llamaindex", "haystack", "semantic kernel"
+  ],
+  "AI Concepts": [
+    "natural language processing", "nlp", "computer vision", "speech recognition",
+    "generative ai", "llm", "large language models", "rag", "retrieval augmented generation",
+    "diffusion models", "gans", "bert", "gpt", "llama", "gemini", "claude",
+    "prompt engineering", "fine tuning", "lora", "qlora", "rlhf",
+    "embeddings", "vector search", "semantic search", "attention mechanism",
+    "transformers architecture", "cnn", "rnn", "lstm", "gru",
+    "object detection", "image segmentation", "ocr", "text classification",
+    "named entity recognition", "ner", "sentiment analysis", "summarization",
+    "question answering"
+  ],
+  "Data Tools": [
+    "pandas", "numpy", "scipy", "matplotlib", "seaborn", "plotly", "bokeh",
+    "tableau", "power bi", "looker", "metabase", "superset", "grafana",
+    "dbt", "airflow", "luigi", "prefect", "dagster", "mage",
+    "spark", "pyspark", "hadoop", "hive", "hbase", "pig", "flink",
+    "kafka", "rabbitmq", "celery", "databricks", "snowflake", "dask",
+    "polars", "excel", "google sheets", "data visualization", "etl", "elt"
+  ],
+  "Cloud": [
+    "aws", "azure", "gcp", "google cloud", "ec2", "s3", "lambda", "sagemaker",
+    "azure ml", "vertex ai", "bigquery", "redshift", "rds", "dynamodb",
+    "cosmos db", "cloud functions", "cloud run", "ecs", "eks", "gke", "aks",
+    "cloudformation", "azure devops", "cloud storage", "cloud sql",
+    "heroku", "digitalocean", "linode", "ibm cloud", "oracle cloud"
+  ],
+  "Deployment & DevOps": [
+    "docker", "kubernetes", "helm", "terraform", "ansible", "puppet", "chef",
+    "jenkins", "github actions", "gitlab ci", "circleci", "argocd", "flux",
+    "linux", "unix", "nginx", "apache", "istio", "service mesh",
+    "bentoml", "triton inference server", "torchserve", "fastapi serving",
+    "ci/cd", "devops", "site reliability engineering", "sre", "gitops",
+    "monitoring", "observability", "prometheus", "elk stack", "datadog", "splunk",
+    "vagrant", "packer", "consul", "vault", "nomad"
+  ],
+  "Databases": [
+    "sql", "mysql", "postgresql", "sqlite", "oracle", "sql server", "mariadb",
+    "mongodb", "redis", "cassandra", "elasticsearch", "neo4j", "influxdb",
+    "clickhouse", "cockroachdb", "tidb", "dynamodb", "firestore",
+    "pinecone", "weaviate", "qdrant", "faiss", "vector database",
+    "nosql", "graph database", "time series database", "database design",
+    "database optimization", "indexing", "query optimization", "orm"
+  ],
+  "Software Engineering": [
+    "git", "github", "gitlab", "bitbucket", "svn", "mercurial",
+    "jira", "confluence", "notion", "trello", "asana", "linear",
+    "agile", "scrum", "kanban", "devops", "tdd", "bdd", "ddd",
+    "system design", "oop", "functional programming", "design patterns",
+    "data structures", "algorithms", "solid principles", "clean code",
+    "code review", "pair programming", "unit testing", "integration testing",
+    "pytest", "junit", "jest", "selenium", "cypress", "playwright",
+    "api design", "microservices architecture", "event driven architecture",
+    "caching", "load balancing", "sharding", "replication"
+  ],
+  "Security": [
+    "cybersecurity", "network security", "penetration testing", "ethical hacking",
+    "cryptography", "ssl", "tls", "oauth", "jwt", "iam",
+    "vulnerability assessment", "siem", "compliance", "gdpr", "soc2",
+    "zero trust", "devsecops", "owasp"
+  ],
+  "Computer Vision": [
+    "opencv", "pillow", "mediapipe", "yolo", "detectron2", "torchvision",
+    "image processing", "video processing", "3d vision", "point cloud",
+    "slam", "augmented reality", "ar", "vr"
+  ],
+  "Mobile": [
+    "swift", "swiftui", "react native", "flutter", "ios", "android",
+    "xcode", "android studio", "firebase", "expo"
+  ]
+}

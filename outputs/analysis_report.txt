@@ -1,0 +1,276 @@
+
+==============================================================
+         AI RESUME INTELLIGENCE REPORT
+==============================================================
+  Generated   : 2026-03-11  16:13:20
+  Data Source : [LIVE] Internet + Groq AI
+==============================================================
+
+  Target Role : Ai Engneer
+  Company     : Google
+
+--------------------------------------------------------------
+  EXTRACTED RESUME SKILLS
+--------------------------------------------------------------
+    1. Automation
+    2. Chatbots
+    3. Data Analysis
+    4. Excel
+    5. Excel Automation
+    6. Github
+    7. Google Sheets
+    8. Html
+    9. Java
+   10. Machine Learning
+   11. Natural Language Processing
+   12. Php
+   13. Python
+
+--------------------------------------------------------------
+  REQUIRED SKILLS FOR: Ai Engneer (via internet)
+--------------------------------------------------------------
+    1. [MISS] Vertex Ai
+    2. [MISS] Bigquery
+    3. [MISS] Go
+    4. [MISS] Gcp
+    5. [HAVE] Python
+    6. [MISS] Tensorflow
+    7. [MISS] Pytorch
+    8. [HAVE] Java
+    9. [MISS] C++
+   10. [HAVE] Machine Learning
+   11. [MISS] Deep Learning
+   12. [MISS] Nlp
+   13. [MISS] Computer Vision
+   14. [MISS] Docker
+   15. [MISS] Kubernetes
+   16. [MISS] Sql
+   17. [MISS] Nosql
+   18. [MISS] Hadoop
+   19. [MISS] Spark
+   20. [MISS] Scala
+   21. [MISS] Java Script
+   22. [MISS] React
+   23. [MISS] Cloud Computing
+
+--------------------------------------------------------------
+  SKILL GAP ANALYSIS
+--------------------------------------------------------------
+  Skill Coverage : 13.0%  (3 of 23 role skills matched)
+
+  MATCHING Skills (3) -- skills you already have:
+      [+] Java
+      [+] Machine Learning
+      [+] Python
+
+  MISSING Skills (20) -- skills you need to learn:
+      [-] Gcp
+      [-] Vertex Ai
+      [-] Bigquery
+      [-] Tensorflow
+      [-] Pytorch
+      [-] Go
+      [-] Sql
+      [-] Docker
+      [-] Nlp
+      [-] C++
+      [-] Deep Learning
+      [-] Computer Vision
+      [-] Kubernetes
+      [-] React
+      [-] Spark
+      [-] Nosql
+      [-] Hadoop
+      [-] Scala
+      [-] Java Script
+      [-] Cloud Computing
+
+  EXTRA Skills (10) -- bonus skills not in role spec:
+      [*] Automation
+      [*] Chatbots
+      [*] Data Analysis
+      [*] Excel
+      [*] Excel Automation
+      [*] Github
+      [*] Google Sheets
+      [*] Html
+      [*] Natural Language Processing
+      [*] Php
+
+--------------------------------------------------------------
+  RESUME SUITABILITY SCORE
+--------------------------------------------------------------
+  Score  : 0.195 / 1.000   [###.................] 19.5%
+  Rating : *     Weak Match -- Significant Skill Gap
+
+--------------------------------------------------------------
+  INTERVIEW SHORTLISTING PROBABILITY
+--------------------------------------------------------------
+  Probability : 10.8%
+  Range       : 2.1% – 19.5%
+  Tier        : Low Probability — Skill Gap Too Large
+
+--------------------------------------------------------------
+  PROFESSIONAL COMPETENCY PROFILE
+--------------------------------------------------------------
+  Technical Depth           [##########] 10.0/10
+  Problem Solving           [#####.....] 5.4/10
+  Team Collaboration        [#######...] 7.4/10
+  Communication             [..........] 0.0/10
+  Leadership                [###.......] 3.9/10
+  System Design             [##########] 10.0/10
+  Learning Ability          [..........] 0.0/10
+  Project Ownership         [##########] 10.0/10
+
+--------------------------------------------------------------
+  VISUAL OUTPUTS
+--------------------------------------------------------------
+  Skill Coverage Radar    : outputs\skill_radar_chart.png
+  Competency Spider Chart : outputs\personality_spider_chart.png
+
+--------------------------------------------------------------
+  PRIORITY SKILLS TO LEARN
+--------------------------------------------------------------
+  Priority = job_importance*0.5 + learning_speed*0.3 + market_demand*0.2
+
+  #1  Gcp                       priority=0.80  demand=0.88
+  #2  Vertex Ai                 priority=0.80  demand=0.65
+  #3  Bigquery                  priority=0.78  demand=0.65
+  #4  Tensorflow                priority=0.77  demand=0.87
+  #5  Pytorch                   priority=0.77  demand=0.92
+  #6  Go                        priority=0.76  demand=0.65
+  #7  Sql                       priority=0.71  demand=0.90
+  #8  Docker                    priority=0.70  demand=0.92
+
+--------------------------------------------------------------
+  LEARNING ROADMAP (missing skills only)
+--------------------------------------------------------------
+
+  >> Week 1–2: Gcp
+     Topics  : GCP IAM, Cloud Run, BigQuery, Vertex AI, Cloud Storage, Pub/Sub
+     Practice: Deploy a containerized app on Cloud Run
+     Project : Train and serve an ML model using Vertex AI pipelines
+
+  >> Week 3–4: Vertex Ai
+     Topics  : Core concepts of Vertex Ai: architecture, fundamentals, and best practices
+     Practice: Complete the official Vertex Ai tutorial and at least 3 hands-on exercises
+     Project : Build a small end-to-end project that demonstrates practical use of Vertex Ai
+
+  >> Week 5–6: Bigquery
+     Topics  : Core concepts of Bigquery: architecture, fundamentals, and best practices
+     Practice: Complete the official Bigquery tutorial and at least 3 hands-on exercises
+     Project : Build a small end-to-end project that demonstrates practical use of Bigquery
+
+  >> Week 7–8: Tensorflow
+     Topics  : TensorFlow Basics, Tensors, Keras Sequential API, tf.data pipelines
+     Practice: Build a digit classifier on MNIST using Keras
+     Project : Train and export an image classification model with SavedModel format
+
+  >> Week 9–10: Pytorch
+     Topics  : Tensors, Autograd, nn.Module, DataLoader, Training loops
+     Practice: Implement a feedforward neural network on CIFAR-10
+     Project : Build a custom image segmentation model and export to ONNX
+
+  >> Week 11–12: Go
+     Topics  : Core concepts of Go: architecture, fundamentals, and best practices
+     Practice: Complete the official Go tutorial and at least 3 hands-on exercises
+     Project : Build a small end-to-end project that demonstrates practical use of Go
+
+--------------------------------------------------------------
+  FREE LEARNING RESOURCES
+--------------------------------------------------------------
+
+  [Gcp]
+     YouTube         : https://www.youtube.com/results?search_query=gcp+tutorial+for+beginners
+     freeCodeCamp    : https://www.freecodecamp.org/news/search/?query=gcp
+     Official Docs   : https://cloud.google.com/docs
+     GitHub          : https://github.com/search?q=awesome+gcp&type=repositories
+     Roadmap.sh      : https://roadmap.sh/search?q=gcp
+
+  [Vertex Ai]
+     YouTube         : https://www.youtube.com/results?search_query=vertex+ai+tutorial+for+beginners
+     freeCodeCamp    : https://www.freecodecamp.org/news/search/?query=vertex+ai
+     Official Docs   : https://devdocs.io/search?q=vertex+ai
+     GitHub          : https://github.com/search?q=awesome+vertex+ai&type=repositories
+     Roadmap.sh      : https://roadmap.sh/search?q=vertex+ai
+
+  [Bigquery]
+     YouTube         : https://www.youtube.com/results?search_query=bigquery+tutorial+for+beginners
+     freeCodeCamp    : https://www.freecodecamp.org/news/search/?query=bigquery
+     Official Docs   : https://devdocs.io/search?q=bigquery
+     GitHub          : https://github.com/search?q=awesome+bigquery&type=repositories
+     Roadmap.sh      : https://roadmap.sh/search?q=bigquery
+
+  [Tensorflow]
+     YouTube         : https://www.youtube.com/results?search_query=tensorflow+tutorial+for+beginners
+     freeCodeCamp    : https://www.freecodecamp.org/news/search/?query=tensorflow
+     Official Docs   : https://www.tensorflow.org/learn
+     GitHub          : https://github.com/jtoy/awesome-tensorflow
+     Roadmap.sh      : https://roadmap.sh/search?q=tensorflow
+
+  [Pytorch]
+     YouTube         : https://www.youtube.com/results?search_query=pytorch+tutorial+for+beginners
+     freeCodeCamp    : https://www.freecodecamp.org/news/search/?query=pytorch
+     Official Docs   : https://pytorch.org/tutorials/
+     GitHub          : https://github.com/bharathgs/Awesome-pytorch-list
+     Roadmap.sh      : https://roadmap.sh/search?q=pytorch
+
+  [Go]
+     YouTube         : https://www.youtube.com/results?search_query=go+tutorial+for+beginners
+     freeCodeCamp    : https://www.freecodecamp.org/news/search/?query=go
+     Official Docs   : https://devdocs.io/search?q=go
+     GitHub          : https://github.com/search?q=awesome+go&type=repositories
+     Roadmap.sh      : https://roadmap.sh/search?q=go
+
+--------------------------------------------------------------
+  RESUME IMPROVEMENT SUGGESTIONS
+--------------------------------------------------------------
+  Add these bullet points after gaining each skill:
+
+  1. Built an end-to-end ML training and serving pipeline on Google Cloud
+     Vertex AI, reducing model deployment time by 60%.
+
+  2. Built and deployed a production-grade system leveraging Vertex Ai,
+     demonstrating hands-on proficiency with its core APIs and best
+     practices.
+
+  3. Built and deployed a production-grade system leveraging Bigquery,
+     demonstrating hands-on proficiency with its core APIs and best
+     practices.
+
+  4. Trained and deployed a TensorFlow image classification model achieving
+     94% accuracy on a custom 50K-image dataset.
+
+  5. Built and fine-tuned a PyTorch BERT model for multi-label text
+     classification achieving 91% micro-F1 score.
+
+  6. Built and deployed a production-grade system leveraging Go,
+     demonstrating hands-on proficiency with its core APIs and best
+     practices.
+
+
+--------------------------------------------------------------
+  PROBABLE INTERVIEW QUESTIONS
+--------------------------------------------------------------
+
+  -- Behavioral ------------------------------------------
+  Q1. Why are you interested in the Ai Engneer role at Google?
+  Q2. Give an example of a project where you had to balance technical debt
+       vs. delivery speed.
+  Q3. Tell me about your most challenging debugging experience and how you
+       resolved it.
+
+  -- Conceptual ------------------------------------------
+  Q1. Explain the bias-variance tradeoff in simple terms.
+  Q2. What is the difference between `is` and `==` in Python?
+
+  -- Coding ------------------------------------------
+  Q1. Write a Python function to check if a string is a palindrome.
+
+  -- Scenario ------------------------------------------
+  Q1. Your model has 99% training accuracy and 60% test accuracy. What is
+       the issue and how do you fix it?
+
+==============================================================
+  END OF REPORT
+==============================================================
